@@ -269,12 +269,12 @@
         <tr><td>type</td><td colspan=2>SuspendMsg</td><td align="center">:x:</td><td></td></tr>
         <tr><td>type</td><td colspan=2>WindowSizeMsg</td><td align="center">:x:</td><td></td></tr>
         <tr><td rowspan=15>Bubbles/<br>cursor</td></tr>
-        <tr><td>func</td><td></td><td>Blink</td><td align="center">:x:</td><td></td></tr>
-        <tr><td>type</td><td></td><td>BlinkMsg</td><td align="center">:x:</td><td></td></tr>
-        <tr><td>type</td><td></td><td>Mode</td><td align="center">:x:</td><td></td></tr>
+        <tr><td>func</td><td colspan=2>Blink</td><td align="center">:x:</td><td></td></tr>
+        <tr><td>type</td><td colspan=2>BlinkMsg</td><td align="center">:x:</td><td></td></tr>
+        <tr><td>type</td><td colspan=2>Mode</td><td align="center">:x:</td><td></td></tr>
         <tr><td>func</td><td>(Mode)</td><td>String</td><td align="center">:x:</td><td></td></tr>
-        <tr><td>type</td><td></td><td>Model</td><td align="center">:x:</td><td></td></tr>
-        <tr><td>func</td><td></td><td>New</td><td align="center">:x:</td><td></td></tr>
+        <tr><td>type</td><td colspan=2>Model</td><td align="center">:x:</td><td></td></tr>
+        <tr><td>func</td><td colspan=2>New</td><td align="center">:x:</td><td></td></tr>
         <tr><td>func</td><td>(*Model)</td><td>BlinkCmd</td><td align="center">:x:</td><td></td></tr>
         <tr><td>func</td><td>(*Model)</td><td>Blur</td><td align="center">:x:</td><td></td></tr>
         <tr><td>func</td><td>(*Model)</td><td>Focus</td><td align="center">:x:</td><td></td></tr>
@@ -284,32 +284,32 @@
         <tr><td>func</td><td>(Model)</td><td>Update</td><td align="center">:x:</td><td></td></tr>
         <tr><td>func</td><td>(Model)</td><td>View</td><td align="center">:x:</td><td></td></tr>
         <tr><td rowspan=14>Bubbles/<br>filepicker</td></tr>
-        <tr><td>func</td><td></td><td>IsHidden</td><td align="center">:x:</td><td></td></tr>
-        <tr><td>type</td><td></td><td>KeyMap</td><td align="center">:x:</td><td></td></tr>
-        <tr><td>func</td><td></td><td>DefaultKeyMap</td><td align="center">:x:</td><td></td></tr>
-        <tr><td>type</td><td></td><td>Model</td><td align="center">:x:</td><td></td></tr>
-        <tr><td>func</td><td></td><td>New</td><td align="center">:x:</td><td></td></tr>
+        <tr><td>func</td><td colspan=2>IsHidden</td><td align="center">:x:</td><td></td></tr>
+        <tr><td>type</td><td colspan=2>KeyMap</td><td align="center">:x:</td><td></td></tr>
+        <tr><td>func</td><td colspan=2>DefaultKeyMap</td><td align="center">:x:</td><td></td></tr>
+        <tr><td>type</td><td colspan=2>Model</td><td align="center">:x:</td><td></td></tr>
+        <tr><td>func</td><td colspan=2>New</td><td align="center">:x:</td><td></td></tr>
         <tr><td>func</td><td>(Model)</td><td>DidSelectDisabledFile</td><td align="center">:x:</td><td></td></tr>
         <tr><td>func</td><td>(Model)</td><td>DidSelectFile</td><td align="center">:x:</td><td></td></tr>
         <tr><td>func</td><td>(Model)</td><td>Init</td><td align="center">:x:</td><td></td></tr>
         <tr><td>func</td><td>(Model)</td><td>Update</td><td align="center">:x:</td><td></td></tr>
         <tr><td>func</td><td>(Model)</td><td>View</td><td align="center">:x:</td><td></td></tr>
-        <tr><td>type</td><td></td><td>Styles</td><td align="center">:x:</td><td></td></tr>
-        <tr><td>func</td><td></td><td>DefaultStyles</td><td align="center">:x:</td><td></td></tr>
-        <tr><td>func</td><td></td><td>DefaultStylesWithRenderer</td><td align="center">:x:</td><td></td></tr>
+        <tr><td>type</td><td colspan=2>Styles</td><td align="center">:x:</td><td></td></tr>
+        <tr><td>func</td><td colspan=2>DefaultStyles</td><td align="center">:x:</td><td></td></tr>
+        <tr><td>func</td><td colspan=2>DefaultStylesWithRenderer</td><td align="center">:x:</td><td></td></tr>
         <tr><td rowspan=9>Bubbles/<br>help</td></tr>
-        <tr><td>type</td><td></td><td>KeyMap</td><td align="center">:x:</td><td></td></tr>
-        <tr><td>type</td><td></td><td>Model</td><td align="center">:x:</td><td></td></tr>
-        <tr><td>func</td><td></td><td>New</td><td align="center">:x:</td><td></td></tr>
+        <tr><td>type</td><td colspan=2>KeyMap</td><td align="center">:x:</td><td></td></tr>
+        <tr><td>type</td><td colspan=2>Model</td><td align="center">:x:</td><td></td></tr>
+        <tr><td>func</td><td colspan=2>New</td><td align="center">:x:</td><td></td></tr>
         <tr><td>func</td><td>(Model)</td><td>FullHelpView</td><td align="center">:x:</td><td></td></tr>
         <tr><td>func</td><td>(Model)</td><td>ShortHelpView</td><td align="center">:x:</td><td></td></tr>
         <tr><td>func</td><td>(Model)</td><td>Update</td><td align="center">:x:</td><td></td></tr>
         <tr><td>func</td><td>(Model)</td><td>View</td><td align="center">:x:</td><td></td></tr>
-        <tr><td>type</td><td></td><td>Styles</td><td align="center">:x:</td><td></td></tr>
+        <tr><td>type</td><td colspan=2>Styles</td><td align="center">:x:</td><td></td></tr>
         <tr><td rowspan=16>Bubbles/<br>key</td></tr>
-        <tr><td>func</td><td></td><td>Matches</td><td align="center">:x:</td><td></td></tr>
-        <tr><td>type</td><td></td><td>Binding</td><td align="center">:x:</td><td></td></tr>
-        <tr><td>func</td><td></td><td>NewBinding</td><td align="center">:x:</td><td></td></tr>
+        <tr><td>func</td><td colspan=2>Matches</td><td align="center">:x:</td><td></td></tr>
+        <tr><td>type</td><td colspan=2>Binding</td><td align="center">:x:</td><td></td></tr>
+        <tr><td>func</td><td colspan=2>NewBinding</td><td align="center">:x:</td><td></td></tr>
         <tr><td>func</td><td>(Binding)</td><td>Enabled</td><td align="center">:x:</td><td></td></tr>
         <tr><td>func</td><td>(Binding)</td><td>Help</td><td align="center">:x:</td><td></td></tr>
         <tr><td>func</td><td>(Binding)</td><td>Keys</td><td align="center">:x:</td><td></td></tr>
@@ -317,14 +317,14 @@
         <tr><td>func</td><td>(*Binding)</td><td>SetHelp</td><td align="center">:x:</td><td></td></tr>
         <tr><td>func</td><td>(*Binding)</td><td>SetKeys</td><td align="center">:x:</td><td></td></tr>
         <tr><td>func</td><td>(*Binding)</td><td>Unbind</td><td align="center">:x:</td><td></td></tr>
-        <tr><td>type</td><td></td><td>BindingOpt</td><td align="center">:x:</td><td></td></tr>
-        <tr><td>func</td><td></td><td>WithDisabled</td><td align="center">:x:</td><td></td></tr>
-        <tr><td>func</td><td></td><td>WithHelp</td><td align="center">:x:</td><td></td></tr>
-        <tr><td>func</td><td></td><td>WithKeys</td><td align="center">:x:</td><td></td></tr>
-        <tr><td>type</td><td></td><td>Help</td><td align="center">:x:</td><td></td></tr>
+        <tr><td>type</td><td colspan=2>BindingOpt</td><td align="center">:x:</td><td></td></tr>
+        <tr><td>func</td><td colspan=2>WithDisabled</td><td align="center">:x:</td><td></td></tr>
+        <tr><td>func</td><td colspan=2>WithHelp</td><td align="center">:x:</td><td></td></tr>
+        <tr><td>func</td><td colspan=2>WithKeys</td><td align="center">:x:</td><td></td></tr>
+        <tr><td>type</td><td colspan=2>Help</td><td align="center">:x:</td><td></td></tr>
         <tr><td rowspan=80>Bubbles/<br>list</td></tr>
-        <tr><td>type</td><td></td><td>DefaultDelegate</td><td align="center">:x:</td><td></td></tr>
-        <tr><td>func</td><td></td><td>NewDefaultDelegate</td><td align="center">:x:</td><td></td></tr>
+        <tr><td>type</td><td colspan=2>DefaultDelegate</td><td align="center">:x:</td><td></td></tr>
+        <tr><td>func</td><td colspan=2>NewDefaultDelegate</td><td align="center">:x:</td><td></td></tr>
         <tr><td>func</td><td>(DefaultDelegate)</td><td>FullHelp</td><td align="center">:x:</td><td></td></tr>
         <tr><td>func</td><td>(DefaultDelegate)</td><td>Height</td><td align="center">:x:</td><td></td></tr>
         <tr><td>func</td><td>(DefaultDelegate)</td><td>Render</td><td align="center">:x:</td><td></td></tr>
@@ -333,19 +333,19 @@
         <tr><td>func</td><td>(DefaultDelegate)</td><td>ShortHelp</td><td align="center">:x:</td><td></td></tr>
         <tr><td>func</td><td>(DefaultDelegate)</td><td>Spacing</td><td align="center">:x:</td><td></td></tr>
         <tr><td>func</td><td>(DefaultDelegate)</td><td>Update</td><td align="center">:x:</td><td></td></tr>
-        <tr><td>type</td><td></td><td>DefaultItem</td><td align="center">:x:</td><td></td></tr>
-        <tr><td>type</td><td></td><td>DefaultItemStyles</td><td align="center">:x:</td><td></td></tr>
-        <tr><td>func</td><td></td><td>NewDefaultItemStyles</td><td align="center">:x:</td><td></td></tr>
-        <tr><td>type</td><td></td><td>FilterFunc</td><td align="center">:x:</td><td></td></tr>
-        <tr><td>type</td><td></td><td>FilterMatchesMsg</td><td align="center">:x:</td><td></td></tr>
-        <tr><td>type</td><td></td><td>FilterState</td><td align="center">:x:</td><td></td></tr>
+        <tr><td>type</td><td colspan=2>DefaultItem</td><td align="center">:x:</td><td></td></tr>
+        <tr><td>type</td><td colspan=2>DefaultItemStyles</td><td align="center">:x:</td><td></td></tr>
+        <tr><td>func</td><td colspan=2>NewDefaultItemStyles</td><td align="center">:x:</td><td></td></tr>
+        <tr><td>type</td><td colspan=2>FilterFunc</td><td align="center">:x:</td><td></td></tr>
+        <tr><td>type</td><td colspan=2>FilterMatchesMsg</td><td align="center">:x:</td><td></td></tr>
+        <tr><td>type</td><td colspan=2>FilterState</td><td align="center">:x:</td><td></td></tr>
         <tr><td>func</td><td>(FilterState)</td><td>String</td><td align="center">:x:</td><td></td></tr>
-        <tr><td>type</td><td></td><td>Item</td><td align="center">:x:</td><td></td></tr>
-        <tr><td>type</td><td></td><td>ItemDelegate</td><td align="center">:x:</td><td></td></tr>
-        <tr><td>type</td><td></td><td>KeyMap</td><td align="center">:x:</td><td></td></tr>
-        <tr><td>func</td><td></td><td>DefaultKeyMap</td><td align="center">:x:</td><td></td></tr>
-        <tr><td>type</td><td></td><td>Model</td><td align="center">:x:</td><td></td></tr>
-        <tr><td>func</td><td></td><td>New</td><td align="center">:x:</td><td></td></tr>
+        <tr><td>type</td><td colspan=2>Item</td><td align="center">:x:</td><td></td></tr>
+        <tr><td>type</td><td colspan=2>ItemDelegate</td><td align="center">:x:</td><td></td></tr>
+        <tr><td>type</td><td colspan=2>KeyMap</td><td align="center">:x:</td><td></td></tr>
+        <tr><td>func</td><td colspan=2>DefaultKeyMap</td><td align="center">:x:</td><td></td></tr>
+        <tr><td>type</td><td colspan=2>Model</td><td align="center">:x:</td><td></td></tr>
+        <tr><td>func</td><td colspan=2>New</td><td align="center">:x:</td><td></td></tr>
         <tr><td>func</td><td>(Model)</td><td>Cursor</td><td align="center">:x:</td><td></td></tr>
         <tr><td>func</td><td>(*Model)</td><td>CursorDown</td><td align="center">:x:</td><td></td></tr>
         <tr><td>func</td><td>(*Model)</td><td>CursorUp</td><td align="center">:x:</td><td></td></tr>
@@ -397,15 +397,15 @@
         <tr><td>func</td><td>(Model)</td><td>View</td><td align="center">:x:</td><td></td></tr>
         <tr><td>func</td><td>(Model)</td><td>VisibleItems</td><td align="center">:x:</td><td></td></tr>
         <tr><td>func</td><td>(Model)</td><td>Width</td><td align="center">:x:</td><td></td></tr>
-        <tr><td>type</td><td></td><td>Rank</td><td align="center">:x:</td><td></td></tr>
-        <tr><td>func</td><td></td><td>DefaultFilter</td><td align="center">:x:</td><td></td></tr>
-        <tr><td>func</td><td></td><td>UnsortedFilter</td><td align="center">:x:</td><td></td></tr>
-        <tr><td>type</td><td></td><td>Styles</td><td align="center">:x:</td><td></td></tr>
-        <tr><td>func</td><td></td><td>DefaultStyles</td><td align="center">:x:</td><td></td></tr>
+        <tr><td>type</td><td colspan=2>Rank</td><td align="center">:x:</td><td></td></tr>
+        <tr><td>func</td><td colspan=2>DefaultFilter</td><td align="center">:x:</td><td></td></tr>
+        <tr><td>func</td><td colspan=2>UnsortedFilter</td><td align="center">:x:</td><td></td></tr>
+        <tr><td>type</td><td colspan=2>Styles</td><td align="center">:x:</td><td></td></tr>
+        <tr><td>func</td><td colspan=2>DefaultStyles</td><td align="center">:x:</td><td></td></tr>
         <tr><td rowspan=17>Bubbles/<br>paginator</td></tr>
-        <tr><td>type</td><td></td><td>KeyMap</td><td align="center">:x:</td><td></td></tr>
-        <tr><td>type</td><td></td><td>Model</td><td align="center">:x:</td><td></td></tr>
-        <tr><td>func</td><td></td><td>New</td><td align="center">:x:</td><td></td></tr>
+        <tr><td>type</td><td colspan=2>KeyMap</td><td align="center">:x:</td><td></td></tr>
+        <tr><td>type</td><td colspan=2>Model</td><td align="center">:x:</td><td></td></tr>
+        <tr><td>func</td><td colspan=2>New</td><td align="center">:x:</td><td></td></tr>
         <tr><td>func</td><td>(*Model)</td><td>GetSliceBounds</td><td align="center">:x:</td><td></td></tr>
         <tr><td>func</td><td>(Model)</td><td>ItemsOnPage</td><td align="center">:x:</td><td></td></tr>
         <tr><td>func</td><td>(*Model)</td><td>NextPage</td><td align="center">:x:</td><td></td></tr>
@@ -415,14 +415,14 @@
         <tr><td>func</td><td>(*Model)</td><td>SetTotalPages</td><td align="center">:x:</td><td></td></tr>
         <tr><td>func</td><td>(Model)</td><td>Update</td><td align="center">:x:</td><td></td></tr>
         <tr><td>func</td><td>(Model)</td><td>View</td><td align="center">:x:</td><td></td></tr>
-        <tr><td>type</td><td></td><td>Option</td><td align="center">:x:</td><td></td></tr>
-        <tr><td>func</td><td></td><td>WithPerPage</td><td align="center">:x:</td><td></td></tr>
-        <tr><td>func</td><td></td><td>WithTotalPages</td><td align="center">:x:</td><td></td></tr>
-        <tr><td>type</td><td></td><td>Type</td><td align="center">:x:</td><td></td></tr>
+        <tr><td>type</td><td colspan=2>Option</td><td align="center">:x:</td><td></td></tr>
+        <tr><td>func</td><td colspan=2>WithPerPage</td><td align="center">:x:</td><td></td></tr>
+        <tr><td>func</td><td colspan=2>WithTotalPages</td><td align="center">:x:</td><td></td></tr>
+        <tr><td>type</td><td colspan=2>Type</td><td align="center">:x:</td><td></td></tr>
         <tr><td rowspan=25>Bubbles/<br>progress</td></tr>
-        <tr><td>type</td><td></td><td>FrameMsg</td><td align="center">:x:</td><td></td></tr>
-        <tr><td>type</td><td></td><td>Model</td><td align="center">:x:</td><td></td></tr>
-        <tr><td>func</td><td></td><td>New</td><td align="center">:x:</td><td></td></tr>
+        <tr><td>type</td><td colspan=2>FrameMsg</td><td align="center">:x:</td><td></td></tr>
+        <tr><td>type</td><td colspan=2>Model</td><td align="center">:x:</td><td></td></tr>
+        <tr><td>func</td><td colspan=2>New</td><td align="center">:x:</td><td></td></tr>
         <tr><td>func</td><td>(*Model)</td><td>DecrPercent</td><td align="center">:x:</td><td></td></tr>
         <tr><td>func</td><td>(*Model)</td><td>IncrPercent</td><td align="center">:x:</td><td></td></tr>
         <tr><td>func</td><td>(Model)</td><td>Init</td><td align="center">:x:</td><td></td></tr>
@@ -433,39 +433,39 @@
         <tr><td>func</td><td>(Model)</td><td>Update</td><td align="center">:x:</td><td></td></tr>
         <tr><td>func</td><td>(Model)</td><td>View</td><td align="center">:x:</td><td></td></tr>
         <tr><td>func</td><td>(Model)</td><td>ViewAs</td><td align="center">:x:</td><td></td></tr>
-        <tr><td>type</td><td></td><td>Option</td><td align="center">:x:</td><td></td></tr>
-        <tr><td>func</td><td></td><td>WithColorProfile</td><td align="center">:x:</td><td></td></tr>
-        <tr><td>func</td><td></td><td>WithDefaultGradient</td><td align="center">:x:</td><td></td></tr>
-        <tr><td>func</td><td></td><td>WithDefaultScaledGradient</td><td align="center">:x:</td><td></td></tr>
-        <tr><td>func</td><td></td><td>WithFillCharacters</td><td align="center">:x:</td><td></td></tr>
-        <tr><td>func</td><td></td><td>WithGradient</td><td align="center">:x:</td><td></td></tr>
-        <tr><td>func</td><td></td><td>WithScaledGradient</td><td align="center">:x:</td><td></td></tr>
-        <tr><td>func</td><td></td><td>WithSolidFill</td><td align="center">:x:</td><td></td></tr>
-        <tr><td>func</td><td></td><td>WithSpringOptions</td><td align="center">:x:</td><td></td></tr>
-        <tr><td>func</td><td></td><td>WithWidth</td><td align="center">:x:</td><td></td></tr>
-        <tr><td>func</td><td></td><td>WithoutPercentage</td><td align="center">:x:</td><td></td></tr>
+        <tr><td>type</td><td colspan=2>Option</td><td align="center">:x:</td><td></td></tr>
+        <tr><td>func</td><td colspan=2>WithColorProfile</td><td align="center">:x:</td><td></td></tr>
+        <tr><td>func</td><td colspan=2>WithDefaultGradient</td><td align="center">:x:</td><td></td></tr>
+        <tr><td>func</td><td colspan=2>WithDefaultScaledGradient</td><td align="center">:x:</td><td></td></tr>
+        <tr><td>func</td><td colspan=2>WithFillCharacters</td><td align="center">:x:</td><td></td></tr>
+        <tr><td>func</td><td colspan=2>WithGradient</td><td align="center">:x:</td><td></td></tr>
+        <tr><td>func</td><td colspan=2>WithScaledGradient</td><td align="center">:x:</td><td></td></tr>
+        <tr><td>func</td><td colspan=2>WithSolidFill</td><td align="center">:x:</td><td></td></tr>
+        <tr><td>func</td><td colspan=2>WithSpringOptions</td><td align="center">:x:</td><td></td></tr>
+        <tr><td>func</td><td colspan=2>WithWidth</td><td align="center">:x:</td><td></td></tr>
+        <tr><td>func</td><td colspan=2>WithoutPercentage</td><td align="center">:x:</td><td></td></tr>
         <tr><td rowspan=6>Bubbles/<br>runeutil</td></tr>
-        <tr><td>type</td><td></td><td>Option</td></td><td align="center">:x:</td><td></td></tr>
-        <tr><td>func</td><td></td><td>ReplaceNewlines</td></td><td align="center">:x:</td><td></td></tr>
-        <tr><td>func</td><td></td><td>ReplaceTabs</td></td><td align="center">:x:</td><td></td></tr>
-        <tr><td>type</td><td></td><td>Sanitizer</td></td><td align="center">:x:</td><td></td></tr>
-        <tr><td>func</td><td></td><td>NewSanitizer</td></td><td align="center">:x:</td><td></td></tr>
+        <tr><td>type</td><td colspan=2>Option</td></td><td align="center">:x:</td><td></td></tr>
+        <tr><td>func</td><td colspan=2>ReplaceNewlines</td></td><td align="center">:x:</td><td></td></tr>
+        <tr><td>func</td><td colspan=2>ReplaceTabs</td></td><td align="center">:x:</td><td></td></tr>
+        <tr><td>type</td><td colspan=2>Sanitizer</td></td><td align="center">:x:</td><td></td></tr>
+        <tr><td>func</td><td colspan=2>NewSanitizer</td></td><td align="center">:x:</td><td></td></tr>
         <tr><td rowspan=12>Bubbles/<br>spinner</td></tr>
-        <tr><td>type</td><td></td><td>Model</td><td align="center">:x:</td><td></td></tr>
-        <tr><td>func</td><td></td><td>New</td><td align="center">:x:</td><td></td></tr>
+        <tr><td>type</td><td colspan=2>Model</td><td align="center">:x:</td><td></td></tr>
+        <tr><td>func</td><td colspan=2>New</td><td align="center">:x:</td><td></td></tr>
         <tr><td>func</td><td>(Model)</td><td>ID</td><td align="center">:x:</td><td></td></tr>
         <tr><td>func</td><td>(Model)</td><td>Tick</td><td align="center">:x:</td><td></td></tr>
         <tr><td>func</td><td>(Model)</td><td>Update</td><td align="center">:x:</td><td></td></tr>
         <tr><td>func</td><td>(Model)</td><td>View</td><td align="center">:x:</td><td></td></tr>
-        <tr><td>type</td><td></td><td>Option</td><td align="center">:x:</td><td></td></tr>
-        <tr><td>func</td><td></td><td>WithSpinner</td><td align="center">:x:</td><td></td></tr>
-        <tr><td>func</td><td></td><td>WithStyle</td><td align="center">:x:</td><td></td></tr>
-        <tr><td>type</td><td></td><td>Spinner</td><td align="center">:x:</td><td></td></tr>
-        <tr><td>type</td><td></td><td>TickMsg</td><td align="center">:x:</td><td></td></tr>
+        <tr><td>type</td><td colspan=2>Option</td><td align="center">:x:</td><td></td></tr>
+        <tr><td>func</td><td colspan=2>WithSpinner</td><td align="center">:x:</td><td></td></tr>
+        <tr><td>func</td><td colspan=2>WithStyle</td><td align="center">:x:</td><td></td></tr>
+        <tr><td>type</td><td colspan=2>Spinner</td><td align="center">:x:</td><td></td></tr>
+        <tr><td>type</td><td colspan=2>TickMsg</td><td align="center">:x:</td><td></td></tr>
         <tr><td rowspan=17>Bubbles/<br>stopwatch</td></tr>
-        <tr><td>type</td><td></td><td>Model</td></td><td align="center">:x:</td><td></td></tr>
-        <tr><td>func</td><td></td><td>New</td></td><td align="center">:x:</td><td></td></tr>
-        <tr><td>func</td><td></td><td>NewWithInterval</td></td><td align="center">:x:</td><td></td></tr>
+        <tr><td>type</td><td colspan=2>Model</td></td><td align="center">:x:</td><td></td></tr>
+        <tr><td>func</td><td colspan=2>New</td></td><td align="center">:x:</td><td></td></tr>
+        <tr><td>func</td><td colspan=2>NewWithInterval</td></td><td align="center">:x:</td><td></td></tr>
         <tr><td>func</td><td>(Model)</td><td>Elapsed</td></td><td align="center">:x:</td><td></td></tr>
         <tr><td>func</td><td>(Model)</td><td>ID</td></td><td align="center">:x:</td><td></td></tr>
         <tr><td>func</td><td>(Model)</td><td>Init</td></td><td align="center">:x:</td><td></td></tr>
@@ -476,17 +476,17 @@
         <tr><td>func</td><td>(Model)</td><td>Toggle</td></td><td align="center">:x:</td><td></td></tr>
         <tr><td>func</td><td>(Model)</td><td>Update</td></td><td align="center">:x:</td><td></td></tr>
         <tr><td>func</td><td>(Model)</td><td>View</td></td><td align="center">:x:</td><td></td></tr>
-        <tr><td>type</td><td></td><td>ResetMsg</td></td><td align="center">:x:</td><td></td></tr>
-        <tr><td>type</td><td></td><td>StartStopMsg</td></td><td align="center">:x:</td><td></td></tr>
-        <tr><td>type</td><td></td><td>TickMsg</td></td><td align="center">:x:</td><td></td></tr>
+        <tr><td>type</td><td colspan=2>ResetMsg</td></td><td align="center">:x:</td><td></td></tr>
+        <tr><td>type</td><td colspan=2>StartStopMsg</td></td><td align="center">:x:</td><td></td></tr>
+        <tr><td>type</td><td colspan=2>TickMsg</td></td><td align="center">:x:</td><td></td></tr>
         <tr><td rowspan=43>Bubbles/<br>table</td></tr>
-        <tr><td>type</td><td></td><td>Column</td><td align="center">:x:</td><td></td></tr>
-        <tr><td>type</td><td></td><td>KeyMap</td><td align="center">:x:</td><td></td></tr>
-        <tr><td>func</td><td></td><td>DefaultKeyMap</td><td align="center">:x:</td><td></td></tr>
+        <tr><td>type</td><td colspan=2>Column</td><td align="center">:x:</td><td></td></tr>
+        <tr><td>type</td><td colspan=2>KeyMap</td><td align="center">:x:</td><td></td></tr>
+        <tr><td>func</td><td colspan=2>DefaultKeyMap</td><td align="center">:x:</td><td></td></tr>
         <tr><td>func</td><td>(KeyMap)</td><td>FullHelp</td><td align="center">:x:</td><td></td></tr>
         <tr><td>func</td><td>(KeyMap)</td><td>ShortHelp</td><td align="center">:x:</td><td></td></tr>
-        <tr><td>type</td><td></td><td>Model</td><td align="center">:x:</td><td></td></tr>
-        <tr><td>func</td><td></td><td>New</td><td align="center">:x:</td><td></td></tr>
+        <tr><td>type</td><td colspan=2>Model</td><td align="center">:x:</td><td></td></tr>
+        <tr><td>func</td><td colspan=2>New</td><td align="center">:x:</td><td></td></tr>
         <tr><td>func</td><td>(*Model)</td><td>Blur</td><td align="center">:x:</td><td></td></tr>
         <tr><td>func</td><td>(Model)</td><td>Columns</td><td align="center">:x:</td><td></td></tr>
         <tr><td>func</td><td>(Model)</td><td>Cursor</td><td align="center">:x:</td><td></td></tr>
@@ -511,25 +511,25 @@
         <tr><td>func</td><td>(*Model)</td><td>UpdateViewport</td><td align="center">:x:</td><td></td></tr>
         <tr><td>func</td><td>(Model)</td><td>View</td><td align="center">:x:</td><td></td></tr>
         <tr><td>func</td><td>(Model)</td><td>Width</td><td align="center">:x:</td><td></td></tr>
-        <tr><td>type</td><td></td><td>Option</td><td align="center">:x:</td><td></td></tr>
-        <tr><td>func</td><td></td><td>WithColumns</td><td align="center">:x:</td><td></td></tr>
-        <tr><td>func</td><td></td><td>WithFocused</td><td align="center">:x:</td><td></td></tr>
-        <tr><td>func</td><td></td><td>WithHeight</td><td align="center">:x:</td><td></td></tr>
-        <tr><td>func</td><td></td><td>WithKeyMap</td><td align="center">:x:</td><td></td></tr>
-        <tr><td>func</td><td></td><td>WithRows</td><td align="center">:x:</td><td></td></tr>
-        <tr><td>func</td><td></td><td>WithStyles</td><td align="center">:x:</td><td></td></tr>
-        <tr><td>func</td><td></td><td>WithWidth</td><td align="center">:x:</td><td></td></tr>
-        <tr><td>type</td><td></td><td>Row</td><td align="center">:x:</td><td></td></tr>
-        <tr><td>type</td><td></td><td>Styles</td><td align="center">:x:</td><td></td></tr>
-        <tr><td>func</td><td></td><td>DefaultStyles</td><td align="center">:x:</td><td></td></tr>
+        <tr><td>type</td><td colspan=2>Option</td><td align="center">:x:</td><td></td></tr>
+        <tr><td>func</td><td colspan=2>WithColumns</td><td align="center">:x:</td><td></td></tr>
+        <tr><td>func</td><td colspan=2>WithFocused</td><td align="center">:x:</td><td></td></tr>
+        <tr><td>func</td><td colspan=2>WithHeight</td><td align="center">:x:</td><td></td></tr>
+        <tr><td>func</td><td colspan=2>WithKeyMap</td><td align="center">:x:</td><td></td></tr>
+        <tr><td>func</td><td colspan=2>WithRows</td><td align="center">:x:</td><td></td></tr>
+        <tr><td>func</td><td colspan=2>WithStyles</td><td align="center">:x:</td><td></td></tr>
+        <tr><td>func</td><td colspan=2>WithWidth</td><td align="center">:x:</td><td></td></tr>
+        <tr><td>type</td><td colspan=2>Row</td><td align="center">:x:</td><td></td></tr>
+        <tr><td>type</td><td colspan=2>Styles</td><td align="center">:x:</td><td></td></tr>
+        <tr><td>func</td><td colspan=2>DefaultStyles</td><td align="center">:x:</td><td></td></tr>
         <tr><td rowspan=33>Bubbles/<br>textarea</td></tr>
-        <tr><td>func</td><td></td><td>Blink</td><td align="center">:x:</td><td></td></tr>
-        <tr><td>func</td><td></td><td>DefaultStyles</td><td align="center">:x:</td><td></td></tr>
-        <tr><td>func</td><td></td><td>Paste</td><td align="center">:x:</td><td></td></tr>
-        <tr><td>type</td><td></td><td>KeyMap</td><td align="center">:x:</td><td></td></tr>
-        <tr><td>type</td><td></td><td>LineInfo</td><td align="center">:x:</td><td></td></tr>
-        <tr><td>type</td><td></td><td>Model</td><td align="center">:x:</td><td></td></tr>
-        <tr><td>func</td><td></td><td>New</td><td align="center">:x:</td><td></td></tr>
+        <tr><td>func</td><td colspan=2>Blink</td><td align="center">:x:</td><td></td></tr>
+        <tr><td>func</td><td colspan=2>DefaultStyles</td><td align="center">:x:</td><td></td></tr>
+        <tr><td>func</td><td colspan=2>Paste</td><td align="center">:x:</td><td></td></tr>
+        <tr><td>type</td><td colspan=2>KeyMap</td><td align="center">:x:</td><td></td></tr>
+        <tr><td>type</td><td colspan=2>LineInfo</td><td align="center">:x:</td><td></td></tr>
+        <tr><td>type</td><td colspan=2>Model</td><td align="center">:x:</td><td></td></tr>
+        <tr><td>func</td><td colspan=2>New</td><td align="center">:x:</td><td></td></tr>
         <tr><td>func</td><td>(*Model)</td><td>Blur</td><td align="center">:x:</td><td></td></tr>
         <tr><td>func</td><td>(*Model)</td><td>CursorDown</td><td align="center">:x:</td><td></td></tr>
         <tr><td>func</td><td>(*Model)</td><td>CursorEnd</td><td align="center">:x:</td><td></td></tr>
@@ -554,26 +554,26 @@
         <tr><td>func</td><td>(Model)</td><td>Value</td><td align="center">:x:</td><td></td></tr>
         <tr><td>func</td><td>(Model)</td><td>View</td><td align="center">:x:</td><td></td></tr>
         <tr><td>func</td><td>(Model)</td><td>Width</td><td align="center">:x:</td><td></td></tr>
-        <tr><td>type</td><td></td><td>Style</td><td align="center">:x:</td><td></td></tr>
+        <tr><td>type</td><td colspan=2>Style</td><td align="center">:x:</td><td></td></tr>
         <tr><td rowspan=12>Bubbles/<br>textarea/<br>memoization</td></tr>
-        <tr><td>type</td><td></td><td>HInt</td><td align="center">:x:</td><td></td></tr>
+        <tr><td>type</td><td colspan=2>HInt</td><td align="center">:x:</td><td></td></tr>
         <tr><td>func</td><td>(HInt)</td><td>Hash</td><td align="center">:x:</td><td></td></tr>
-        <tr><td>type</td><td></td><td>HString</td><td align="center">:x:</td><td></td></tr>
+        <tr><td>type</td><td colspan=2>HString</td><td align="center">:x:</td><td></td></tr>
         <tr><td>func</td><td>(HString)</td><td>Hash</td><td align="center">:x:</td><td></td></tr>
-        <tr><td>type</td><td></td><td>Hasher</td><td align="center">:x:</td><td></td></tr>
-        <tr><td>type</td><td></td><td>MemoCache</td><td align="center">:x:</td><td></td></tr>
-        <tr><td>func</td><td></td><td>NewMemoCache</td><td align="center">:x:</td><td></td></tr>
+        <tr><td>type</td><td colspan=2>Hasher</td><td align="center">:x:</td><td></td></tr>
+        <tr><td>type</td><td colspan=2>MemoCache</td><td align="center">:x:</td><td></td></tr>
+        <tr><td>func</td><td colspan=2>NewMemoCache</td><td align="center">:x:</td><td></td></tr>
         <tr><td>func</td><td>(*MemoCache)</td><td>Capacity</td><td align="center">:x:</td><td></td></tr>
         <tr><td>func</td><td>(*MemoCache)</td><td>Get</td><td align="center">:x:</td><td></td></tr>
         <tr><td>func</td><td>(*MemoCache)</td><td>Set</td><td align="center">:x:</td><td></td></tr>
         <tr><td>func</td><td>(*MemoCache)</td><td>Size</td><td align="center">:x:</td><td></td></tr>
         <tr><td rowspan=23>Bubbles/<br>textinput</td></tr>
-        <tr><td>func</td><td></td><td>Blink</td><td align="center">:x:</td><td></td></tr>
-        <tr><td>func</td><td></td><td>Paste</td><td align="center">:x:</td><td></td></tr>
-        <tr><td>type</td><td></td><td>EchoMode</td><td align="center">:x:</td><td></td></tr>
-        <tr><td>type</td><td></td><td>KeyMap</td><td align="center">:x:</td><td></td></tr>
-        <tr><td>type</td><td></td><td>Model</td><td align="center">:x:</td><td></td></tr>
-        <tr><td>func</td><td></td><td>New</td><td align="center">:x:</td><td></td></tr>
+        <tr><td>func</td><td colspan=2>Blink</td><td align="center">:x:</td><td></td></tr>
+        <tr><td>func</td><td colspan=2>Paste</td><td align="center">:x:</td><td></td></tr>
+        <tr><td>type</td><td colspan=2>EchoMode</td><td align="center">:x:</td><td></td></tr>
+        <tr><td>type</td><td colspan=2>KeyMap</td><td align="center">:x:</td><td></td></tr>
+        <tr><td>type</td><td colspan=2>Model</td><td align="center">:x:</td><td></td></tr>
+        <tr><td>func</td><td colspan=2>New</td><td align="center">:x:</td><td></td></tr>
         <tr><td>func</td><td>(*Model)</td><td>AvailableSuggestions</td><td align="center">:x:</td><td></td></tr>
         <tr><td>func</td><td>(*Model)</td><td>Blur</td><td align="center">:x:</td><td></td></tr>
         <tr><td>func</td><td>(*Model)</td><td>CurrentSuggestion</td><td align="center">:x:</td><td></td></tr>
@@ -589,11 +589,11 @@
         <tr><td>func</td><td>(Model)</td><td>Update</td><td align="center">:x:</td><td></td></tr>
         <tr><td>func</td><td>(Model)</td><td>Value</td><td align="center">:x:</td><td></td></tr>
         <tr><td>func</td><td>(Model)</td><td>View</td><td align="center">:x:</td><td></td></tr>
-        <tr><td>type</td><td></td><td>ValidateFunc</td><td align="center">:x:</td><td></td></tr>
+        <tr><td>type</td><td colspan=2>ValidateFunc</td><td align="center">:x:</td><td></td></tr>
         <tr><td rowspan=16>Bubbles/<br>timer</td></tr>
-        <tr><td>type</td><td></td><td>Model</td><td align="center">:x:</td><td></td></tr>
-        <tr><td>func</td><td></td><td>New</td><td align="center">:x:</td><td></td></tr>
-        <tr><td>func</td><td></td><td>NewWithInterval</td><td align="center">:x:</td><td></td></tr>
+        <tr><td>type</td><td colspan=2>Model</td><td align="center">:x:</td><td></td></tr>
+        <tr><td>func</td><td colspan=2>New</td><td align="center">:x:</td><td></td></tr>
+        <tr><td>func</td><td colspan=2>NewWithInterval</td><td align="center">:x:</td><td></td></tr>
         <tr><td>func</td><td>(Model)</td><td>ID</td><td align="center">:x:</td><td></td></tr>
         <tr><td>func</td><td>(Model)</td><td>Init</td><td align="center">:x:</td><td></td></tr>
         <tr><td>func</td><td>(Model)</td><td>Running</td><td align="center">:x:</td><td></td></tr>
@@ -603,17 +603,17 @@
         <tr><td>func</td><td>(*Model)</td><td>Toggle</td><td align="center">:x:</td><td></td></tr>
         <tr><td>func</td><td>(Model)</td><td>Update</td><td align="center">:x:</td><td></td></tr>
         <tr><td>func</td><td>(Model)</td><td>View</td><td align="center">:x:</td><td></td></tr>
-        <tr><td>type</td><td></td><td>StartStopMsg</td><td align="center">:x:</td><td></td></tr>
-        <tr><td>type</td><td></td><td>TickMsg</td><td align="center">:x:</td><td></td></tr>
-        <tr><td>type</td><td></td><td>TimeoutMsg</td><td align="center">:x:</td><td></td></tr>
+        <tr><td>type</td><td colspan=2>StartStopMsg</td><td align="center">:x:</td><td></td></tr>
+        <tr><td>type</td><td colspan=2>TickMsg</td><td align="center">:x:</td><td></td></tr>
+        <tr><td>type</td><td colspan=2>TimeoutMsg</td><td align="center">:x:</td><td></td></tr>
         <tr><td rowspan=27>Bubbles/<br>viewport</td></tr>
-        <tr><td>func</td><td></td><td>Sync</td><td align="center">:x:</td><td></td></tr>
-        <tr><td>func</td><td></td><td>ViewDown</td><td align="center">:x:</td><td></td></tr>
-        <tr><td>func</td><td></td><td>ViewUp</td><td align="center">:x:</td><td></td></tr>
-        <tr><td>type</td><td></td><td>KeyMap</td><td align="center">:x:</td><td></td></tr>
-        <tr><td>func</td><td></td><td>DefaultKeyMap</td><td align="center">:x:</td><td></td></tr>
-        <tr><td>type</td><td></td><td>Model</td><td align="center">:x:</td><td></td></tr>
-        <tr><td>func</td><td></td><td>New</td><td align="center">:x:</td><td></td></tr>
+        <tr><td>func</td><td colspan=2>Sync</td><td align="center">:x:</td><td></td></tr>
+        <tr><td>func</td><td colspan=2>ViewDown</td><td align="center">:x:</td><td></td></tr>
+        <tr><td>func</td><td colspan=2>ViewUp</td><td align="center">:x:</td><td></td></tr>
+        <tr><td>type</td><td colspan=2>KeyMap</td><td align="center">:x:</td><td></td></tr>
+        <tr><td>func</td><td colspan=2>DefaultKeyMap</td><td align="center">:x:</td><td></td></tr>
+        <tr><td>type</td><td colspan=2>Model</td><td align="center">:x:</td><td></td></tr>
+        <tr><td>func</td><td colspan=2>New</td><td align="center">:x:</td><td></td></tr>
         <tr><td>func</td><td>(Model)</td><td>AtBottom</td><td align="center">:x:</td><td></td></tr>
         <tr><td>func</td><td>(Model)</td><td>AtTop</td><td align="center">:x:</td><td></td></tr>
         <tr><td>func</td><td>(*Model)</td><td>GotoBottom</td><td align="center">:x:</td><td></td></tr>
@@ -634,62 +634,62 @@
         <tr><td>func</td><td>(*Model)</td><td>ViewUp</td><td align="center">:x:</td><td></td></tr>
         <tr><td>func</td><td>(Model)</td><td>VisibleLineCount</td><td align="center">:x:</td><td></td></tr>
         <tr><td rowspan=13>Harmonica</td></tr>
-        <tr><td>func</td><td></td><td>FPS</td><td align="center">:x:</td><td></td></tr>
-        <tr><td>type</td><td></td><td>Point</td><td align="center">:x:</td><td></td></tr>
-        <tr><td>type</td><td></td><td>Projectile</td><td align="center">:x:</td><td></td></tr>
-        <tr><td>func</td><td></td><td>NewProjectile</td><td align="center">:x:</td><td></td></tr>
+        <tr><td>func</td><td colspan=2>FPS</td><td align="center">:x:</td><td></td></tr>
+        <tr><td>type</td><td colspan=2>Point</td><td align="center">:x:</td><td></td></tr>
+        <tr><td>type</td><td colspan=2>Projectile</td><td align="center">:x:</td><td></td></tr>
+        <tr><td>func</td><td colspan=2>NewProjectile</td><td align="center">:x:</td><td></td></tr>
         <tr><td>func</td><td>(*Projectile)</td><td>Acceleration</td><td align="center">:x:</td><td></td></tr>
         <tr><td>func</td><td>(*Projectile)</td><td>Position</td><td align="center">:x:</td><td></td></tr>
         <tr><td>func</td><td>(*Projectile)</td><td>Update</td><td align="center">:x:</td><td></td></tr>
         <tr><td>func</td><td>(*Projectile)</td><td>Velocity</td><td align="center">:x:</td><td></td></tr>
-        <tr><td>type</td><td></td><td>Spring</td><td align="center">:x:</td><td></td></tr>
-        <tr><td>func</td><td></td><td>NewSpring</td><td align="center">:x:</td><td></td></tr>
+        <tr><td>type</td><td colspan=2>Spring</td><td align="center">:x:</td><td></td></tr>
+        <tr><td>func</td><td colspan=2>NewSpring</td><td align="center">:x:</td><td></td></tr>
         <tr><td>func</td><td>(Spring)</td><td>Update</td><td align="center">:x:</td><td></td></tr>
-        <tr><td>type</td><td></td><td>Vector</td><td align="center">:x:</td><td></td></tr>
+        <tr><td>type</td><td colspan=2>Vector</td><td align="center">:x:</td><td></td></tr>
         <tr><td rowspan=223>Lip Gloss</td></tr>
-        <tr><td>func</td><td></td><td>ColorProfile</td><td align="center">:x:</td><td></td></tr>
-        <tr><td>func</td><td></td><td>HasDarkBackground</td><td align="center">:x:</td><td></td></tr>
-        <tr><td>func</td><td></td><td>Height</td><td align="center">:x:</td><td></td></tr>
-        <tr><td>func</td><td></td><td>JoinHorizontal</td><td align="center">:x:</td><td></td></tr>
-        <tr><td>func</td><td></td><td>JoinVertical</td><td align="center">:x:</td><td></td></tr>
-        <tr><td>func</td><td></td><td>Place</td><td align="center">:x:</td><td></td></tr>
-        <tr><td>func</td><td></td><td>PlaceHorizontal</td><td align="center">:x:</td><td></td></tr>
-        <tr><td>func</td><td></td><td>PlaceVertical</td><td align="center">:x:</td><td></td></tr>
-        <tr><td>func</td><td></td><td>SetColorProfile</td><td align="center">:x:</td><td></td></tr>
-        <tr><td>func</td><td></td><td>SetDefaultRenderer</td><td align="center">:x:</td><td></td></tr>
-        <tr><td>func</td><td></td><td>SetHasDarkBackground</td><td align="center">:x:</td><td></td></tr>
-        <tr><td>func</td><td></td><td>Size</td><td align="center">:x:</td><td></td></tr>
-        <tr><td>func</td><td></td><td>StyleRunes</td><td align="center">:x:</td><td></td></tr>
-        <tr><td>func</td><td></td><td>Width</td><td align="center">:x:</td><td></td></tr>
-        <tr><td>type</td><td></td><td>ANSIColor</td><td align="center">:x:</td><td></td></tr>
+        <tr><td>func</td><td colspan=2>ColorProfile</td><td align="center">:x:</td><td></td></tr>
+        <tr><td>func</td><td colspan=2>HasDarkBackground</td><td align="center">:x:</td><td></td></tr>
+        <tr><td>func</td><td colspan=2>Height</td><td align="center">:x:</td><td></td></tr>
+        <tr><td>func</td><td colspan=2>JoinHorizontal</td><td align="center">:x:</td><td></td></tr>
+        <tr><td>func</td><td colspan=2>JoinVertical</td><td align="center">:x:</td><td></td></tr>
+        <tr><td>func</td><td colspan=2>Place</td><td align="center">:x:</td><td></td></tr>
+        <tr><td>func</td><td colspan=2>PlaceHorizontal</td><td align="center">:x:</td><td></td></tr>
+        <tr><td>func</td><td colspan=2>PlaceVertical</td><td align="center">:x:</td><td></td></tr>
+        <tr><td>func</td><td colspan=2>SetColorProfile</td><td align="center">:x:</td><td></td></tr>
+        <tr><td>func</td><td colspan=2>SetDefaultRenderer</td><td align="center">:x:</td><td></td></tr>
+        <tr><td>func</td><td colspan=2>SetHasDarkBackground</td><td align="center">:x:</td><td></td></tr>
+        <tr><td>func</td><td colspan=2>Size</td><td align="center">:x:</td><td></td></tr>
+        <tr><td>func</td><td colspan=2>StyleRunes</td><td align="center">:x:</td><td></td></tr>
+        <tr><td>func</td><td colspan=2>Width</td><td align="center">:x:</td><td></td></tr>
+        <tr><td>type</td><td colspan=2>ANSIColor</td><td align="center">:x:</td><td></td></tr>
         <tr><td>func</td><td>(ANSIColor)</td><td>RGBA</td><td align="center">:x:</td><td></td></tr>
-        <tr><td>type</td><td></td><td>AdaptiveColor</td><td align="center">:x:</td><td></td></tr>
+        <tr><td>type</td><td colspan=2>AdaptiveColor</td><td align="center">:x:</td><td></td></tr>
         <tr><td>func</td><td>(AdaptiveColor)</td><td>RGBA</td><td align="center">:x:</td><td></td></tr>
-        <tr><td>type</td><td></td><td>Border</td><td align="center">:x:</td><td></td></tr>
-        <tr><td>func</td><td></td><td>BlockBorder</td><td align="center">:x:</td><td></td></tr>
-        <tr><td>func</td><td></td><td>DoubleBorder</td><td align="center">:x:</td><td></td></tr>
-        <tr><td>func</td><td></td><td>HiddenBorder</td><td align="center">:x:</td><td></td></tr>
-        <tr><td>func</td><td></td><td>InnerHalfBlockBorder</td><td align="center">:x:</td><td></td></tr>
-        <tr><td>func</td><td></td><td>NormalBorder</td><td align="center">:x:</td><td></td></tr>
-        <tr><td>func</td><td></td><td>OuterHalfBlockBorder</td><td align="center">:x:</td><td></td></tr>
-        <tr><td>func</td><td></td><td>RoundedBorder</td><td align="center">:x:</td><td></td></tr>
-        <tr><td>func</td><td></td><td>ThickBorder</td><td align="center">:x:</td><td></td></tr>
+        <tr><td>type</td><td colspan=2>Border</td><td align="center">:x:</td><td></td></tr>
+        <tr><td>func</td><td colspan=2>BlockBorder</td><td align="center">:x:</td><td></td></tr>
+        <tr><td>func</td><td colspan=2>DoubleBorder</td><td align="center">:x:</td><td></td></tr>
+        <tr><td>func</td><td colspan=2>HiddenBorder</td><td align="center">:x:</td><td></td></tr>
+        <tr><td>func</td><td colspan=2>InnerHalfBlockBorder</td><td align="center">:x:</td><td></td></tr>
+        <tr><td>func</td><td colspan=2>NormalBorder</td><td align="center">:x:</td><td></td></tr>
+        <tr><td>func</td><td colspan=2>OuterHalfBlockBorder</td><td align="center">:x:</td><td></td></tr>
+        <tr><td>func</td><td colspan=2>RoundedBorder</td><td align="center">:x:</td><td></td></tr>
+        <tr><td>func</td><td colspan=2>ThickBorder</td><td align="center">:x:</td><td></td></tr>
         <tr><td>func</td><td>(Border)</td><td>GetBottomSize</td><td align="center">:x:</td><td></td></tr>
         <tr><td>func</td><td>(Border)</td><td>GetLeftSize</td><td align="center">:x:</td><td></td></tr>
         <tr><td>func</td><td>(Border)</td><td>GetRightSize</td><td align="center">:x:</td><td></td></tr>
         <tr><td>func</td><td>(Border)</td><td>GetTopSize</td><td align="center">:x:</td><td></td></tr>
-        <tr><td>type</td><td></td><td>Color</td><td align="center">:x:</td><td></td></tr>
+        <tr><td>type</td><td colspan=2>Color</td><td align="center">:x:</td><td></td></tr>
         <tr><td>func</td><td>(Color)</td><td>RGBA</td><td align="center">:x:</td><td></td></tr>
-        <tr><td>type</td><td></td><td>CompleteAdaptiveColor</td><td align="center">:x:</td><td></td></tr>
+        <tr><td>type</td><td colspan=2>CompleteAdaptiveColor</td><td align="center">:x:</td><td></td></tr>
         <tr><td>func</td><td>(CompleteAdaptiveColor)</td><td>RGBA</td><td align="center">:x:</td><td></td></tr>
-        <tr><td>type</td><td></td><td>CompleteColor</td><td align="center">:x:</td><td></td></tr>
+        <tr><td>type</td><td colspan=2>CompleteColor</td><td align="center">:x:</td><td></td></tr>
         <tr><td>func</td><td>(CompleteColor)</td><td>RGBA</td><td align="center">:x:</td><td></td></tr>
-        <tr><td>type</td><td></td><td>NoColor</td><td align="center">:x:</td><td></td></tr>
+        <tr><td>type</td><td colspan=2>NoColor</td><td align="center">:x:</td><td></td></tr>
         <tr><td>func</td><td>(NoColor)</td><td>RGBA</td><td align="center">:x:</td><td></td></tr>
-        <tr><td>type</td><td></td><td>Position</td><td align="center">:x:</td><td></td></tr>
-        <tr><td>type</td><td></td><td>Renderer</td><td align="center">:x:</td><td></td></tr>
-        <tr><td>func</td><td></td><td>DefaultRenderer</td><td align="center">:x:</td><td></td></tr>
-        <tr><td>func</td><td></td><td>NewRenderer</td><td align="center">:x:</td><td></td></tr>
+        <tr><td>type</td><td colspan=2>Position</td><td align="center">:x:</td><td></td></tr>
+        <tr><td>type</td><td colspan=2>Renderer</td><td align="center">:x:</td><td></td></tr>
+        <tr><td>func</td><td colspan=2>DefaultRenderer</td><td align="center">:x:</td><td></td></tr>
+        <tr><td>func</td><td colspan=2>NewRenderer</td><td align="center">:x:</td><td></td></tr>
         <tr><td>func</td><td>(*Renderer)</td><td>ColorProfile</td><td align="center">:x:</td><td></td></tr>
         <tr><td>func</td><td>(*Renderer)</td><td>HasDarkBackground</td><td align="center">:x:</td><td></td></tr>
         <tr><td>func</td><td>(*Renderer)</td><td>NewStyle</td><td align="center">:x:</td><td></td></tr>
@@ -700,8 +700,8 @@
         <tr><td>func</td><td>(*Renderer)</td><td>SetColorProfile</td><td align="center">:x:</td><td></td></tr>
         <tr><td>func</td><td>(*Renderer)</td><td>SetHasDarkBackground</td><td align="center">:x:</td><td></td></tr>
         <tr><td>func</td><td>(*Renderer)</td><td>SetOutput</td><td align="center">:x:</td><td></td></tr>
-        <tr><td>type</td><td></td><td>Style</td><td align="center">:x:</td><td></td></tr>
-        <tr><td>func</td><td></td><td>NewStyle</td><td align="center">:x:</td><td></td></tr>
+        <tr><td>type</td><td colspan=2>Style</td><td align="center">:x:</td><td></td></tr>
+        <tr><td>func</td><td colspan=2>NewStyle</td><td align="center">:x:</td><td></td></tr>
         <tr><td>func</td><td>(Style)</td><td>Align</td><td align="center">:x:</td><td></td></tr>
         <tr><td>func</td><td>(Style)</td><td>AlignHorizontal</td><td align="center">:x:</td><td></td></tr>
         <tr><td>func</td><td>(Style)</td><td>AlignVertical</td><td align="center">:x:</td><td></td></tr>
@@ -864,10 +864,10 @@
         <tr><td>func</td><td>(Style)</td><td>UnsetWidth</td><td align="center">:x:</td><td></td></tr>
         <tr><td>func</td><td>(Style)</td><td>Value</td><td align="center">:x:</td><td></td></tr>
         <tr><td>func</td><td>(Style)</td><td>Width</td><td align="center">:x:</td><td></td></tr>
-        <tr><td>type</td><td></td><td>TerminalColor</td></td><td align="center">:x:</td><td></td></tr>
-        <tr><td>type</td><td></td><td>WhitespaceOption</td></td><td align="center">:x:</td><td></td></tr>
-        <tr><td>func</td><td></td><td>WithWhitespaceBackground</td></td><td align="center">:x:</td><td></td></tr>
-        <tr><td>func</td><td></td><td>WithWhitespaceChars</td></td><td align="center">:x:</td><td></td></tr>
-        <tr><td>func</td><td></td><td>WithWhitespaceForeground</td></td><td align="center">:x:</td><td></td></tr>
+        <tr><td>type</td><td colspan=2>TerminalColor</td></td><td align="center">:x:</td><td></td></tr>
+        <tr><td>type</td><td colspan=2>WhitespaceOption</td></td><td align="center">:x:</td><td></td></tr>
+        <tr><td>func</td><td colspan=2>WithWhitespaceBackground</td></td><td align="center">:x:</td><td></td></tr>
+        <tr><td>func</td><td colspan=2>WithWhitespaceChars</td></td><td align="center">:x:</td><td></td></tr>
+        <tr><td>func</td><td colspan=2>WithWhitespaceForeground</td></td><td align="center">:x:</td><td></td></tr>
     </tbody>
 </table>
