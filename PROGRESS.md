@@ -445,11 +445,11 @@
         <tr><td>func</td><td colspan=2>WithWidth</td><td align="center">:x:</td><td></td></tr>
         <tr><td>func</td><td colspan=2>WithoutPercentage</td><td align="center">:x:</td><td></td></tr>
         <tr><td rowspan=6>Bubbles/<br>runeutil</td></tr>
-        <tr><td>type</td><td colspan=2>Option</td></td><td align="center">:x:</td><td></td></tr>
-        <tr><td>func</td><td colspan=2>ReplaceNewlines</td></td><td align="center">:x:</td><td></td></tr>
-        <tr><td>func</td><td colspan=2>ReplaceTabs</td></td><td align="center">:x:</td><td></td></tr>
-        <tr><td>type</td><td colspan=2>Sanitizer</td></td><td align="center">:x:</td><td></td></tr>
-        <tr><td>func</td><td colspan=2>NewSanitizer</td></td><td align="center">:x:</td><td></td></tr>
+        <tr><td>type</td><td colspan=2>Option</td><td align="center">:x:</td><td></td></tr>
+        <tr><td>func</td><td colspan=2>ReplaceNewlines</td><td align="center">:x:</td><td></td></tr>
+        <tr><td>func</td><td colspan=2>ReplaceTabs</td><td align="center">:x:</td><td></td></tr>
+        <tr><td>type</td><td colspan=2>Sanitizer</td><td align="center">:x:</td><td></td></tr>
+        <tr><td>func</td><td colspan=2>NewSanitizer</td><td align="center">:x:</td><td></td></tr>
         <tr><td rowspan=12>Bubbles/<br>spinner</td></tr>
         <tr><td>type</td><td colspan=2>Model</td><td align="center">:x:</td><td></td></tr>
         <tr><td>func</td><td colspan=2>New</td><td align="center">:x:</td><td></td></tr>
@@ -463,22 +463,22 @@
         <tr><td>type</td><td colspan=2>Spinner</td><td align="center">:x:</td><td></td></tr>
         <tr><td>type</td><td colspan=2>TickMsg</td><td align="center">:x:</td><td></td></tr>
         <tr><td rowspan=17>Bubbles/<br>stopwatch</td></tr>
-        <tr><td>type</td><td colspan=2>Model</td></td><td align="center">:x:</td><td></td></tr>
-        <tr><td>func</td><td colspan=2>New</td></td><td align="center">:x:</td><td></td></tr>
-        <tr><td>func</td><td colspan=2>NewWithInterval</td></td><td align="center">:x:</td><td></td></tr>
-        <tr><td>func</td><td>(Model)</td><td>Elapsed</td></td><td align="center">:x:</td><td></td></tr>
-        <tr><td>func</td><td>(Model)</td><td>ID</td></td><td align="center">:x:</td><td></td></tr>
-        <tr><td>func</td><td>(Model)</td><td>Init</td></td><td align="center">:x:</td><td></td></tr>
-        <tr><td>func</td><td>(Model)</td><td>Reset</td></td><td align="center">:x:</td><td></td></tr>
-        <tr><td>func</td><td>(Model)</td><td>Running</td></td><td align="center">:x:</td><td></td></tr>
-        <tr><td>func</td><td>(Model)</td><td>Start</td></td><td align="center">:x:</td><td></td></tr>
-        <tr><td>func</td><td>(Model)</td><td>Stop</td></td><td align="center">:x:</td><td></td></tr>
-        <tr><td>func</td><td>(Model)</td><td>Toggle</td></td><td align="center">:x:</td><td></td></tr>
-        <tr><td>func</td><td>(Model)</td><td>Update</td></td><td align="center">:x:</td><td></td></tr>
-        <tr><td>func</td><td>(Model)</td><td>View</td></td><td align="center">:x:</td><td></td></tr>
-        <tr><td>type</td><td colspan=2>ResetMsg</td></td><td align="center">:x:</td><td></td></tr>
-        <tr><td>type</td><td colspan=2>StartStopMsg</td></td><td align="center">:x:</td><td></td></tr>
-        <tr><td>type</td><td colspan=2>TickMsg</td></td><td align="center">:x:</td><td></td></tr>
+        <tr><td>type</td><td colspan=2>Model</td><td align="center">:x:</td><td></td></tr>
+        <tr><td>func</td><td colspan=2>New</td><td align="center">:x:</td><td></td></tr>
+        <tr><td>func</td><td colspan=2>NewWithInterval</td><td align="center">:x:</td><td></td></tr>
+        <tr><td>func</td><td>(Model)</td><td>Elapsed</td><td align="center">:x:</td><td></td></tr>
+        <tr><td>func</td><td>(Model)</td><td>ID</td><td align="center">:x:</td><td></td></tr>
+        <tr><td>func</td><td>(Model)</td><td>Init</td><td align="center">:x:</td><td></td></tr>
+        <tr><td>func</td><td>(Model)</td><td>Reset</td><td align="center">:x:</td><td></td></tr>
+        <tr><td>func</td><td>(Model)</td><td>Running</td><td align="center">:x:</td><td></td></tr>
+        <tr><td>func</td><td>(Model)</td><td>Start</td><td align="center">:x:</td><td></td></tr>
+        <tr><td>func</td><td>(Model)</td><td>Stop</td><td align="center">:x:</td><td></td></tr>
+        <tr><td>func</td><td>(Model)</td><td>Toggle</td><td align="center">:x:</td><td></td></tr>
+        <tr><td>func</td><td>(Model)</td><td>Update</td><td align="center">:x:</td><td></td></tr>
+        <tr><td>func</td><td>(Model)</td><td>View</td><td align="center">:x:</td><td></td></tr>
+        <tr><td>type</td><td colspan=2>ResetMsg</td><td align="center">:x:</td><td></td></tr>
+        <tr><td>type</td><td colspan=2>StartStopMsg</td><td align="center">:x:</td><td></td></tr>
+        <tr><td>type</td><td colspan=2>TickMsg</td><td align="center">:x:</td><td></td></tr>
         <tr><td rowspan=43>Bubbles/<br>table</td></tr>
         <tr><td>type</td><td colspan=2>Column</td><td align="center">:x:</td><td></td></tr>
         <tr><td>type</td><td colspan=2>KeyMap</td><td align="center">:x:</td><td></td></tr>
@@ -864,10 +864,10 @@
         <tr><td>func</td><td>(Style)</td><td>UnsetWidth</td><td align="center">:x:</td><td></td></tr>
         <tr><td>func</td><td>(Style)</td><td>Value</td><td align="center">:x:</td><td></td></tr>
         <tr><td>func</td><td>(Style)</td><td>Width</td><td align="center">:x:</td><td></td></tr>
-        <tr><td>type</td><td colspan=2>TerminalColor</td></td><td align="center">:x:</td><td></td></tr>
-        <tr><td>type</td><td colspan=2>WhitespaceOption</td></td><td align="center">:x:</td><td></td></tr>
-        <tr><td>func</td><td colspan=2>WithWhitespaceBackground</td></td><td align="center">:x:</td><td></td></tr>
-        <tr><td>func</td><td colspan=2>WithWhitespaceChars</td></td><td align="center">:x:</td><td></td></tr>
-        <tr><td>func</td><td colspan=2>WithWhitespaceForeground</td></td><td align="center">:x:</td><td></td></tr>
+        <tr><td>type</td><td colspan=2>TerminalColor</td><td align="center">:x:</td><td></td></tr>
+        <tr><td>type</td><td colspan=2>WhitespaceOption</td><td align="center">:x:</td><td></td></tr>
+        <tr><td>func</td><td colspan=2>WithWhitespaceBackground</td><td align="center">:x:</td><td></td></tr>
+        <tr><td>func</td><td colspan=2>WithWhitespaceChars</td><td align="center">:x:</td><td></td></tr>
+        <tr><td>func</td><td colspan=2>WithWhitespaceForeground</td><td align="center">:x:</td><td></td></tr>
     </tbody>
 </table>
