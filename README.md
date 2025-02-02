@@ -1,7 +1,7 @@
 
 # charm++
 
-![MIT License](https://img.shields.io/github/license/charmbracelet/bubbletea) [![Progress](https://img.shields.io/badge/Progress-4%25-red)](./PROGRESS.md)
+![MIT License](https://img.shields.io/github/license/charmbracelet/bubbletea) [![Progress](https://img.shields.io/badge/Progress-2%25-red)](./PROGRESS.md)
 
 
 charm++ is a set of C++23 bindings for [Charmbracelet](https://charm.sh/)'s TUI framework. It currently includes bindings for the following libraries:

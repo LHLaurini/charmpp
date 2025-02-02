@@ -170,7 +170,7 @@
             <th>10</td>
             <th>3</td>
             <th>657</td>
-            <th>0.02%</td>
+            <th>1.8%</td>
         </tr>
     </tfoot>
 </table>
