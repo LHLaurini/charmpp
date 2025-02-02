@@ -160,7 +160,7 @@
             <td>Lip Gloss</td>
             <td align="center">0</td>
             <td align="center">0</td>
-            <td align="center">222</td>
+            <td align="center">216</td>
             <td align="center">0%</td>
         </tr>
     </tbody>
@@ -169,7 +169,7 @@
             <th>Total</td>
             <th>10</td>
             <th>3</td>
-            <th>663</td>
+            <th>657</td>
             <th>0.02%</td>
         </tr>
     </tfoot>
@@ -646,7 +646,7 @@
         <tr><td>func</td><td colspan=2>NewSpring</td><td align="center">:x:</td><td></td></tr>
         <tr><td>func</td><td>(Spring)</td><td>Update</td><td align="center">:x:</td><td></td></tr>
         <tr><td>type</td><td colspan=2>Vector</td><td align="center">:x:</td><td></td></tr>
-        <tr><td rowspan=223>Lip Gloss</td></tr>
+        <tr><td rowspan=217>Lip Gloss</td></tr>
         <tr><td>func</td><td colspan=2>ColorProfile</td><td align="center">:x:</td><td></td></tr>
         <tr><td>func</td><td colspan=2>HasDarkBackground</td><td align="center">:x:</td><td></td></tr>
         <tr><td>func</td><td colspan=2>Height</td><td align="center">:x:</td><td></td></tr>
@@ -662,9 +662,7 @@
         <tr><td>func</td><td colspan=2>StyleRunes</td><td align="center">:x:</td><td></td></tr>
         <tr><td>func</td><td colspan=2>Width</td><td align="center">:x:</td><td></td></tr>
         <tr><td>type</td><td colspan=2>ANSIColor</td><td align="center">:x:</td><td></td></tr>
-        <tr><td>func</td><td>(ANSIColor)</td><td>RGBA</td><td align="center">:x:</td><td></td></tr>
         <tr><td>type</td><td colspan=2>AdaptiveColor</td><td align="center">:x:</td><td></td></tr>
-        <tr><td>func</td><td>(AdaptiveColor)</td><td>RGBA</td><td align="center">:x:</td><td></td></tr>
         <tr><td>type</td><td colspan=2>Border</td><td align="center">:x:</td><td></td></tr>
         <tr><td>func</td><td colspan=2>BlockBorder</td><td align="center">:x:</td><td></td></tr>
         <tr><td>func</td><td colspan=2>DoubleBorder</td><td align="center">:x:</td><td></td></tr>
@@ -679,13 +677,9 @@
         <tr><td>func</td><td>(Border)</td><td>GetRightSize</td><td align="center">:x:</td><td></td></tr>
         <tr><td>func</td><td>(Border)</td><td>GetTopSize</td><td align="center">:x:</td><td></td></tr>
         <tr><td>type</td><td colspan=2>Color</td><td align="center">:x:</td><td></td></tr>
-        <tr><td>func</td><td>(Color)</td><td>RGBA</td><td align="center">:x:</td><td></td></tr>
         <tr><td>type</td><td colspan=2>CompleteAdaptiveColor</td><td align="center">:x:</td><td></td></tr>
-        <tr><td>func</td><td>(CompleteAdaptiveColor)</td><td>RGBA</td><td align="center">:x:</td><td></td></tr>
         <tr><td>type</td><td colspan=2>CompleteColor</td><td align="center">:x:</td><td></td></tr>
-        <tr><td>func</td><td>(CompleteColor)</td><td>RGBA</td><td align="center">:x:</td><td></td></tr>
         <tr><td>type</td><td colspan=2>NoColor</td><td align="center">:x:</td><td></td></tr>
-        <tr><td>func</td><td>(NoColor)</td><td>RGBA</td><td align="center">:x:</td><td></td></tr>
         <tr><td>type</td><td colspan=2>Position</td><td align="center">:x:</td><td></td></tr>
         <tr><td>type</td><td colspan=2>Renderer</td><td align="center">:x:</td><td></td></tr>
         <tr><td>func</td><td colspan=2>DefaultRenderer</td><td align="center">:x:</td><td></td></tr>
