@@ -1,0 +1,22 @@
+---
+BasedOnStyle: Microsoft
+Language:        Cpp
+AlignAfterOpenBracket: BlockIndent
+AlignConsecutiveDeclarations:
+  PadOperators:    true
+BreakConstructorInitializers: BeforeComma
+BreakTemplateDeclarations: Yes
+ColumnLimit:     100
+Cpp11BracedListStyle: false
+FixNamespaceComments: false
+IndentExternBlock: NoIndent
+IndentPPDirectives: AfterHash
+IndentRequiresClause: false
+IntegerLiteralSeparator:
+  Hex:             4
+LineEnding:      LF
+PackConstructorInitializers: CurrentLine
+PenaltyBreakBeforeFirstCallParameter: 0
+PointerAlignment: Left
+UseTab:          ForIndentation
+...

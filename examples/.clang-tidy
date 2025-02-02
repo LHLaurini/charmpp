@@ -1,0 +1,7 @@
+---
+InheritParentConfig: true
+# We maintain the naming scheme from the original examples, so we don't care about these
+Checks: >
+  -readability-identifier-length,
+  -readability-identifier-naming
+...
