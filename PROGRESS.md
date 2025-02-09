@@ -34,10 +34,10 @@
     <tbody>
         <tr>
             <td>Bubble Tea</td>
-            <td align="center">10</td>
-            <td align="center">3</td>
+            <td align="center">14</td>
+            <td align="center">1</td>
             <td align="center">80</td>
-            <td align="center">14.4%</td>
+            <td align="center">18.1%</td>
         </tr>
         <tr>
             <td>Bubbles/cursor</td>
@@ -169,10 +169,10 @@
     <tfoot>
         <tr>
             <th>Total</td>
-            <th>10</td>
-            <th>3</td>
+            <th>14</td>
+            <th>1</td>
             <th>657</td>
-            <th>1.8%</td>
+            <th>2.2%</td>
         </tr>
     </tfoot>
 </table>
@@ -208,9 +208,9 @@
 		<tr><td>type</td><td colspan=2>ExecCallback</td><td align="center">:x:</td><td></td></tr>
 		<tr><td>type</td><td colspan=2>ExecCommand</td><td align="center">:x:</td><td></td></tr>
 		<tr><td>type</td><td colspan=2>FocusMsg</td><td align="center">:x:</td><td></td></tr>
-		<tr><td>type</td><td colspan=2>Key</td><td align="center">:exclamation:</td><td>Fields cannot be accessed directly</td></tr>
+		<tr><td>type</td><td colspan=2>Key</td><td align="center">:heavy_check_mark:</td><td></td></tr>
 		<tr><td>func</td><td>(Key)</td><td>String</td><td align="center">:heavy_check_mark:</td><td></td></tr>
-		<tr><td>type</td><td colspan=2>KeyMsg</td><td align="center">:exclamation:</td><td><code>KeyMsg</code> is an alias for <code>Key</code></td></tr>
+		<tr><td>type</td><td colspan=2>KeyMsg</td><td align="center">:heavy_check_mark:</td><td><code>KeyMsg</code> is an alias for <code>Key</code></td></tr>
 		<tr><td>func</td><td>(KeyMsg)</td><td>String</td><td align="center">:heavy_check_mark:</td><td></td></tr>
 		<tr><td>type</td><td colspan=2>KeyType</td><td align="center">:x:</td><td></td></tr>
 		<tr><td>func</td><td>(KeyType)</td><td>String</td><td align="center">:x:</td><td></td></tr>
@@ -266,9 +266,9 @@
 		<tr><td>func</td><td colspan=2>WithoutRenderer</td><td align="center">:x:</td><td></td></tr>
 		<tr><td>func</td><td colspan=2>WithoutSignalHandler</td><td align="center">:x:</td><td></td></tr>
 		<tr><td>func</td><td colspan=2>WithoutSignals</td><td align="center">:x:</td><td></td></tr>
-		<tr><td>type</td><td colspan=2>QuitMsg</td><td align="center">:x:</td><td></td></tr>
+		<tr><td>type</td><td colspan=2>QuitMsg</td><td align="center">:heavy_check_mark:</td><td></td></tr>
 		<tr><td>type</td><td colspan=2>ResumeMsg</td><td align="center">:x:</td><td></td></tr>
-		<tr><td>type</td><td colspan=2>SuspendMsg</td><td align="center">:x:</td><td></td></tr>
+		<tr><td>type</td><td colspan=2>SuspendMsg</td><td align="center">:heavy_check_mark:</td><td></td></tr>
 		<tr><td>type</td><td colspan=2>WindowSizeMsg</td><td align="center">:x:</td><td></td></tr>
 	<tr><td rowspan=15>Bubbles/<br>cursor</td></tr>
 		<tr><td>func</td><td colspan=2>Blink</td><td align="center">:x:</td><td></td></tr>

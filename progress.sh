@@ -9,12 +9,11 @@ progress()
 		type Cmd
 			implemented
 		type Key
-			partial
-			note "Fields cannot be accessed directly"
+			implemented
 		func "(Key) String"
 			implemented
 		type KeyMsg
-			partial
+			implemented
 			note "<code>KeyMsg</code> is an alias for <code>Key</code>"
 		type "(KeyMsg) String"
 			implemented
@@ -32,6 +31,10 @@ progress()
 			partial
 			note "<code>opts</code> parameter unimplemented"
 		func "(*Program) Run"
+			implemented
+		type QuitMsg
+			implemented
+		type SuspendMsg
 			implemented
 
 	package Bubbles/cursor bubbles/cursor
