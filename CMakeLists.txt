@@ -34,6 +34,13 @@ add_custom_command(
 	MAIN_DEPENDENCY src/go/main.go
 	DEPENDS src/go/go.mod
 	        src/go/go.sum
+	        src/go/goobject.go
+	        src/go/interop.go
+	        src/go/interop.h
+	        src/go/logging.go
+	        src/go/main.go
+	        src/go/model.go
+	        src/go/tea.go
 	WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/src/go
 	CODEGEN
 )
