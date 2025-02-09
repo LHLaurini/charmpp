@@ -11,11 +11,18 @@ import (
 )
 
 //export NewProgram
-func NewProgram(modelPtr unsafe.Pointer) goObject {
+func NewProgram(modelPtr unsafe.Pointer, opts *uintptr, numOpts uint) goObject {
 	var model model
 	model.modelPtr = modelPtr
 
-	program := tea.NewProgram(model)
+	optSlice := unsafe.Slice(opts, numOpts)
+	programOptions := make([]tea.ProgramOption, numOpts)
+
+	for i, opt := range optSlice {
+		programOptions[i] = cgo.Handle(opt).Value().(tea.ProgramOption)
+	}
+
+	program := tea.NewProgram(model, programOptions...)
 
 	return toGoObject(program)
 }

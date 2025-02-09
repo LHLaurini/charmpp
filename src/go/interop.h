@@ -18,6 +18,7 @@ typedef enum
 	MsgTypeUnknown,
 	MsgTypeUser,
 	MsgTypeKey,
+	MsgTypeMouse,
 	MsgTypeQuit,
 	MsgTypeSuspend,
 } MsgType;
@@ -44,12 +45,24 @@ typedef struct
 
 typedef struct
 {
+	int X;
+	int Y;
+	bool Shift;
+	bool Alt;
+	bool Ctrl;
+	int Action;
+	int Button;
+} InterMouseEvent;
+
+typedef struct
+{
 	MsgType Type;
 	uintptr_t Msg;
 } MsgTypeAndMsg;
 
 CppKey fromCppKey(uintptr_t id);
 uintptr_t toCppKey(GoKey key);
+uintptr_t toCppMouseEvent(InterMouseEvent mouseEvent);
 void toCppString(_GoString_ str, void* stringPtr);
 uintptr_t callInit(void* modelPtr);
 uintptr_t callUpdate(void* modelPtr, MsgType msgType, uintptr_t msgValue);

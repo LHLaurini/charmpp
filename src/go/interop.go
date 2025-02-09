@@ -19,6 +19,8 @@ func typeFromMsg(msg tea.Msg) C.MsgType {
 		return C.MsgTypeUser
 	case tea.KeyMsg:
 		return C.MsgTypeKey
+	case tea.MouseMsg:
+		return C.MsgTypeMouse
 	case tea.SuspendMsg:
 		return C.MsgTypeSuspend
 	case tea.QuitMsg:
@@ -34,6 +36,8 @@ func valueFromMsg(msg tea.Msg) C.uintptr_t {
 		return msg
 	case tea.KeyMsg:
 		return toCppKey(tea.Key(msg))
+	case tea.MouseMsg:
+		return toCppMouseEvent(tea.MouseEvent(msg))
 	case tea.SuspendMsg:
 		return 0
 	case tea.QuitMsg:
@@ -56,6 +60,8 @@ func makeCmd(cmdID C.uintptr_t) tea.Cmd {
 			return msg.Msg
 
 		case C.MsgTypeKey:
+			fallthrough
+		case C.MsgTypeMouse:
 			handle := cgo.Handle(msg.Msg)
 			goMsg := handle.Value().(tea.Msg)
 			handle.Delete()
@@ -118,9 +124,39 @@ func toCppKey(key tea.Key) C.uintptr_t {
 	})
 }
 
+func fromCppMouseEvent(mouseEvent C.InterMouseEvent) tea.MouseEvent {
+	return tea.MouseEvent{
+		X:      int(mouseEvent.X),
+		Y:      int(mouseEvent.Y),
+		Shift:  bool(mouseEvent.Shift),
+		Alt:    bool(mouseEvent.Alt),
+		Ctrl:   bool(mouseEvent.Ctrl),
+		Action: tea.MouseAction(mouseEvent.Action),
+		Button: tea.MouseButton(mouseEvent.Button),
+		Type:   0,
+	}
+}
+
+func toCppMouseEvent(mouseEvent tea.MouseEvent) C.uintptr_t {
+	return C.toCppMouseEvent(C.InterMouseEvent{
+		X:      C.int(mouseEvent.X),
+		Y:      C.int(mouseEvent.Y),
+		Shift:  C.bool(mouseEvent.Shift),
+		Alt:    C.bool(mouseEvent.Alt),
+		Ctrl:   C.bool(mouseEvent.Ctrl),
+		Action: C.int(mouseEvent.Action),
+		Button: C.int(mouseEvent.Button),
+	})
+}
+
 //export ToGoKey
 func ToGoKey(key C.CppKey) goObject {
 	return toGoObject(fromCppKey(key))
+}
+
+//export ToGoMouseEvent
+func ToGoMouseEvent(mouseEvent C.InterMouseEvent) goObject {
+	return toGoObject(fromCppMouseEvent(mouseEvent))
 }
 
 //export ToCppString

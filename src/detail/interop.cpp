@@ -123,6 +123,32 @@ auto FromCppKey(const tea::Key& key) -> ::CppKey
 	};
 }
 
+[[nodiscard]] auto ToCppMouseEvent(const ::InterMouseEvent& mouseEvent) -> tea::MouseEvent
+{
+	return {
+		.X = mouseEvent.X,
+		.Y = mouseEvent.Y,
+		.Shift = mouseEvent.Shift,
+		.Alt = mouseEvent.Alt,
+		.Ctrl = mouseEvent.Ctrl,
+		.Action = static_cast<tea::MouseAction>(mouseEvent.Action),
+		.Button = static_cast<tea::MouseButton>(mouseEvent.Button),
+	};
+}
+
+auto FromCppMouseEvent(const tea::MouseEvent& mouseEvent) -> ::InterMouseEvent
+{
+	return {
+		.X = mouseEvent.X,
+		.Y = mouseEvent.Y,
+		.Shift = mouseEvent.Shift,
+		.Alt = mouseEvent.Alt,
+		.Ctrl = mouseEvent.Ctrl,
+		.Action = mouseEvent.Action,
+		.Button = mouseEvent.Button,
+	};
+}
+
 struct MsgToGo
 {
 	auto operator()(tea::UnknownMsg /*msg*/) const -> MsgTypeAndMsg
@@ -134,6 +160,11 @@ struct MsgToGo
 	auto operator()(const tea::KeyMsg& msg) const -> MsgTypeAndMsg
 	{
 		return { MsgTypeKey, ::ToGoKey(FromCppKey(msg)) };
+	}
+
+	auto operator()(const tea::MouseMsg& msg) const -> MsgTypeAndMsg
+	{
+		return { MsgTypeMouse, ::ToGoMouseEvent(FromCppMouseEvent(msg)) };
 	}
 
 	auto operator()(tea::QuitMsg /*msg*/) const -> MsgTypeAndMsg
@@ -165,6 +196,11 @@ auto toCppKey(::GoKey key) -> uintptr_t
 	return GetStore<tea::Key>().Stow(::ToCppKey(key));
 }
 
+auto toCppMouseEvent(InterMouseEvent mouseEvent) -> uintptr_t
+{
+	return GetStore<tea::MouseEvent>().Stow(::ToCppMouseEvent(mouseEvent));
+}
+
 void toCppString(GoString str, void* stringPtr)
 {
 	auto& stringOut = *static_cast<std::string*>(stringPtr);
@@ -191,6 +227,9 @@ auto callUpdate(void* modelPtr, MsgType msgType, std::uintptr_t msgValue) -> std
 
 		case MsgType::MsgTypeKey:
 			return GetStore<tea::Key>().Detach(msgValue);
+
+case MsgType::MsgTypeMouse:
+			return GetStore<tea::MouseEvent>().Detach(msgValue);
 
 		case MsgType::MsgTypeQuit:
 			return tea::QuitMsg();

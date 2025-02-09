@@ -18,6 +18,8 @@ target_sources(charm++cpp
 	             src/go.cpp
 	             src/key.cpp
 	             src/logging.cpp
+	             src/mouse.cpp
+	             src/options.cpp
 	             src/tea.cpp
 	             src/utils.cpp
 
@@ -25,6 +27,7 @@ target_sources(charm++cpp
 	             src/detail/go.cpp
 	             src/detail/interop.cpp
 	             src/detail/key.cpp
+	             src/detail/mouse.cpp
 	             src/detail/utils.cpp
 )
 
@@ -41,6 +44,8 @@ add_custom_command(
 	        src/go/logging.go
 	        src/go/main.go
 	        src/go/model.go
+	        src/go/mouse.go
+	        src/go/options.go
 	        src/go/tea.go
 	WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/src/go
 	CODEGEN
