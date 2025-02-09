@@ -34,10 +34,10 @@
     <tbody>
         <tr>
             <td>Bubble Tea</td>
-            <td align="center">14</td>
-            <td align="center">1</td>
+            <td align="center">23</td>
+            <td align="center">0</td>
             <td align="center">80</td>
-            <td align="center">18.1%</td>
+            <td align="center">28.8%</td>
         </tr>
         <tr>
             <td>Bubbles/cursor</td>
@@ -169,10 +169,10 @@
     <tfoot>
         <tr>
             <th>Total</td>
-            <th>14</td>
-            <th>1</td>
+            <th>23</td>
+            <th>0</td>
             <th>657</td>
-            <th>2.2%</td>
+            <th>3.5%</td>
         </tr>
     </tfoot>
 </table>
@@ -216,12 +216,12 @@
 		<tr><td>func</td><td>(KeyType)</td><td>String</td><td align="center">:x:</td><td></td></tr>
 		<tr><td>type</td><td colspan=2>LogOptionsSetter</td><td align="center">:x:</td><td></td></tr>
 		<tr><td>type</td><td colspan=2>Model</td><td align="center">:heavy_check_mark:</td><td></td></tr>
-		<tr><td>type</td><td colspan=2>MouseAction</td><td align="center">:x:</td><td></td></tr>
-		<tr><td>type</td><td colspan=2>MouseButton</td><td align="center">:x:</td><td></td></tr>
-		<tr><td>type</td><td colspan=2>MouseEvent</td><td align="center">:x:</td><td></td></tr>
-		<tr><td>func</td><td>(MouseEvent)</td><td>IsWheel</td><td align="center">:x:</td><td></td></tr>
-		<tr><td>func</td><td>(MouseEvent)</td><td>String</td><td align="center">:x:</td><td></td></tr>
-		<tr><td>type</td><td colspan=2>MouseMsg</td><td align="center">:x:</td><td></td></tr>
+		<tr><td>type</td><td colspan=2>MouseAction</td><td align="center">:heavy_check_mark:</td><td></td></tr>
+		<tr><td>type</td><td colspan=2>MouseButton</td><td align="center">:heavy_check_mark:</td><td></td></tr>
+		<tr><td>type</td><td colspan=2>MouseEvent</td><td align="center">:heavy_check_mark:</td><td></td></tr>
+		<tr><td>func</td><td>(MouseEvent)</td><td>IsWheel</td><td align="center">:heavy_check_mark:</td><td></td></tr>
+		<tr><td>func</td><td>(MouseEvent)</td><td>String</td><td align="center">:heavy_check_mark:</td><td></td></tr>
+		<tr><td>type</td><td colspan=2>MouseMsg</td><td align="center">:heavy_check_mark:</td><td><code>MouseMsg</code> is an alias for <code>MouseEvent</code></td></tr>
 		<tr><td>func</td><td>(MouseMsg)</td><td>String</td><td align="center">:x:</td><td></td></tr>
 		<tr><td>type</td><td colspan=2>Msg</td><td align="center">:heavy_check_mark:</td><td></td></tr>
 		<tr><td>func</td><td colspan=2>ClearScreen</td><td align="center">:x:</td><td></td></tr>
@@ -239,7 +239,7 @@
 		<tr><td>func</td><td colspan=2>ShowCursor</td><td align="center">:x:</td><td></td></tr>
 		<tr><td>func</td><td colspan=2>Suspend</td><td align="center">:heavy_check_mark:</td><td></td></tr>
 		<tr><td>type</td><td colspan=2>Program</td><td align="center">:heavy_check_mark:</td><td></td></tr>
-		<tr><td>func</td><td colspan=2>NewProgram</td><td align="center">:exclamation:</td><td><code>opts</code> parameter unimplemented</td></tr>
+		<tr><td>func</td><td colspan=2>NewProgram</td><td align="center">:heavy_check_mark:</td><td></td></tr>
 		<tr><td>func</td><td>(*Program)</td><td>Kill</td><td align="center">:x:</td><td></td></tr>
 		<tr><td>func</td><td>(*Program)</td><td>Printf</td><td align="center">:x:</td><td></td></tr>
 		<tr><td>func</td><td>(*Program)</td><td>Println</td><td align="center">:x:</td><td></td></tr>
@@ -249,7 +249,7 @@
 		<tr><td>func</td><td>(*Program)</td><td>Run</td><td align="center">:heavy_check_mark:</td><td></td></tr>
 		<tr><td>func</td><td>(*Program)</td><td>Send</td><td align="center">:x:</td><td></td></tr>
 		<tr><td>func</td><td>(*Program)</td><td>Wait</td><td align="center">:x:</td><td></td></tr>
-		<tr><td>type</td><td colspan=2>ProgramOption</td><td align="center">:x:</td><td></td></tr>
+		<tr><td>type</td><td colspan=2>ProgramOption</td><td align="center">:heavy_check_mark:</td><td></td></tr>
 		<tr><td>func</td><td colspan=2>WithAltScreen</td><td align="center">:x:</td><td></td></tr>
 		<tr><td>func</td><td colspan=2>WithContext</td><td align="center">:x:</td><td></td></tr>
 		<tr><td>func</td><td colspan=2>WithEnvironment</td><td align="center">:x:</td><td></td></tr>
@@ -257,7 +257,7 @@
 		<tr><td>func</td><td colspan=2>WithFilter</td><td align="center">:x:</td><td></td></tr>
 		<tr><td>func</td><td colspan=2>WithInput</td><td align="center">:x:</td><td></td></tr>
 		<tr><td>func</td><td colspan=2>WithInputTTY</td><td align="center">:x:</td><td></td></tr>
-		<tr><td>func</td><td colspan=2>WithMouseAllMotion</td><td align="center">:x:</td><td></td></tr>
+		<tr><td>func</td><td colspan=2>WithMouseAllMotion</td><td align="center">:heavy_check_mark:</td><td></td></tr>
 		<tr><td>func</td><td colspan=2>WithMouseCellMotion</td><td align="center">:x:</td><td></td></tr>
 		<tr><td>func</td><td colspan=2>WithOutput</td><td align="center">:x:</td><td></td></tr>
 		<tr><td>func</td><td colspan=2>WithReportFocus</td><td align="center">:x:</td><td></td></tr>

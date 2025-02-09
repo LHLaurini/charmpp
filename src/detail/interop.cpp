@@ -228,7 +228,7 @@ auto callUpdate(void* modelPtr, MsgType msgType, std::uintptr_t msgValue) -> std
 		case MsgType::MsgTypeKey:
 			return GetStore<tea::Key>().Detach(msgValue);
 
-case MsgType::MsgTypeMouse:
+		case MsgType::MsgTypeMouse:
 			return GetStore<tea::MouseEvent>().Detach(msgValue);
 
 		case MsgType::MsgTypeQuit:

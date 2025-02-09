@@ -189,9 +189,9 @@ do
 
 	total=$(($(docs "$package" | wc -l)))
 
-	((grand_impl+=impl))
-	((grand_part+=part))
-	((grand_total+=total))
+	((grand_impl+=impl)) || :
+	((grand_part+=part)) || :
+	((grand_total+=total)) || :
 
 	cat << END
         <tr>

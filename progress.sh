@@ -17,6 +17,19 @@ progress()
 			note "<code>KeyMsg</code> is an alias for <code>Key</code>"
 		type "(KeyMsg) String"
 			implemented
+		type MouseAction
+			implemented
+		type MouseButton
+			implemented
+		type MouseEvent
+			implemented
+		func "(MouseEvent) IsWheel"
+			implemented
+		func "(MouseEvent) String"
+			implemented
+		type MouseMsg
+			implemented
+			note "<code>MouseMsg</code> is an alias for <code>MouseEvent</code>"
 		type Model
 			implemented
 		type Msg
@@ -28,9 +41,12 @@ progress()
 		type Program
 			implemented
 		func NewProgram
-			partial
-			note "<code>opts</code> parameter unimplemented"
+			implemented
 		func "(*Program) Run"
+			implemented
+		type ProgramOption
+			implemented
+		func WithMouseAllMotion
 			implemented
 		type QuitMsg
 			implemented
