@@ -1,8 +1,11 @@
 module;
 
+#include <concepts>
+#include <string>
 #include <string_view>
 #include <tuple>
 #include <type_traits>
+#include <utility>
 #include <variant>
 
 export module charm:utils.detail;
@@ -43,14 +46,14 @@ auto CgoCall(Ret (*func)(Params...), auto... args)
 template <typename Type>
 struct LambdaParamImpl
 {
-	static constexpr auto valid = false;
+	static constexpr auto Valid = false;
 };
 
 template <typename Ret, typename Lambda, typename Param>
 requires(std::same_as<Ret, tea::Cmd> || std::same_as<Ret, void>)
 struct LambdaParamImpl<Ret (Lambda::*)(Param) const>
 {
-	static constexpr auto valid = true;
+	static constexpr auto Valid = true;
 	using ReturnType = Ret;
 	using ParameterType = Param;
 };

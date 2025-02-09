@@ -2,7 +2,6 @@ module;
 
 #include "libcharm++go.h"
 #include <cstdint>
-#include <expected>
 #include <string>
 
 export module charm:go.detail;

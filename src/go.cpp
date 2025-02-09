@@ -1,7 +1,6 @@
 module;
 
 #include "libcharm++go.h"
-#include <expected>
 
 export module charm:go;
 

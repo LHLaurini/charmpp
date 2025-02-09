@@ -1,11 +1,14 @@
 module;
 
 #include <any>
+#include <concepts>
 #include <cstdlib>
 #include <optional>
 #include <stdexcept>
+#include <string>
 #include <string_view>
 #include <type_traits>
+#include <utility>
 #include <variant>
 
 export module charm:utils;
@@ -23,7 +26,7 @@ export namespace utils
 /// - Must be non-overloaded;
 /// - Must return either void or Cmd.
 template <typename Type>
-concept MsgVisitor = LambdaParamHelper<Type>::valid;
+concept MsgVisitor = LambdaParamHelper<Type>::Valid;
 
 template <MsgVisitor First, MsgVisitor... Others>
 auto VisitMsg(tea::Msg& msg, First firstVisitor, Others... otherVisitors) -> tea::Cmd

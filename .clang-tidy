@@ -10,22 +10,26 @@ Checks: >
   performance-*,
   portability-*,
   readability-*,
-  -misc-use-internal-linkage
+  -misc-use-internal-linkage,
+  -performance-enum-size
 WarningsAsErrors: ''
 HeaderFilterRegex: ''
 FormatStyle: file
 SystemHeaders: false
 CheckOptions:
   readability-identifier-length.IgnoredParameterNames: id
+  misc-non-private-member-variables-in-classes.IgnoreClassesWithAllMemberVariablesBeingPublic: true
   # To be consistent with Go, we only use camelBack and CamelCase
   readability-identifier-naming.NamespaceCase: camelBack
   readability-identifier-naming.ClassCase: CamelCase
-  readability-identifier-naming.ConstantCase: camelBack
+  readability-identifier-naming.ConstantCase: CamelCase
   readability-identifier-naming.ConceptCase: CamelCase
   readability-identifier-naming.EnumCase: CamelCase
   readability-identifier-naming.EnumConstantCase: CamelCase
   readability-identifier-naming.FunctionCase: CamelCase
+  readability-identifier-naming.MemberCase: camelBack
   readability-identifier-naming.ParameterCase: camelBack
+  readability-identifier-naming.PublicMemberCase: CamelCase
   readability-identifier-naming.TypeAliasCase: CamelCase
   readability-identifier-naming.TypeTemplateParameterCase: CamelCase
   readability-identifier-naming.ValueParameterCase: camelBack

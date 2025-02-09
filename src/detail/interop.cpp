@@ -1,10 +1,14 @@
 module;
 
 #include "libcharm++go.h"
+#include <concepts>
+#include <cstddef>
 #include <cstdint>
 #include <print>
 #include <string>
 #include <unordered_map>
+#include <utility>
+#include <variant>
 
 export module charm:interop;
 
@@ -61,7 +65,7 @@ class Store
 	~Store()
 	{
 #ifndef NDEBUG
-		if (storage.size() > 0)
+		if (!storage.empty())
 		{
 			try
 			{
@@ -93,7 +97,7 @@ struct StoreAccessor
 };
 
 template <typename T>
-static constexpr StoreAccessor<T> store;
+static constexpr StoreAccessor<T> GetStore;
 
 // tea::Cmd
 // tea::Msg
@@ -113,7 +117,7 @@ auto callInit(void* modelPtr) -> std::uintptr_t
 	auto&& cmd = static_cast<tea::ModelBase*>(modelPtr)->Init();
 	if (cmd)
 	{
-		return store<tea::Cmd>().Stow(std::move(cmd));
+		return GetStore<tea::Cmd>().Stow(std::move(cmd));
 	}
 	return 0;
 }
@@ -130,28 +134,28 @@ auto callUpdate(void* modelPtr, MsgType msgType, std::uintptr_t msgValue) -> std
 			return tea::KeyMsg(msgValue);
 
 		case MsgType::MsgTypeUser:
-			return store<tea::Msg>().Detach(msgValue);
+			return GetStore<tea::Msg>().Detach(msgValue);
 		}
 	};
 
 	auto&& cmd = static_cast<tea::ModelBase*>(modelPtr)->Update(makeMsg());
 	if (cmd)
 	{
-		return store<tea::Cmd>().Stow(std::move(cmd));
+		return GetStore<tea::Cmd>().Stow(std::move(cmd));
 	}
 	return 0;
 }
 
 auto callView(void* modelPtr) -> std::uintptr_t
 {
-	return store<std::string>().Stow(static_cast<tea::ModelBase*>(modelPtr)->View());
+	return GetStore<std::string>().Stow(static_cast<tea::ModelBase*>(modelPtr)->View());
 }
 
 auto callAndDestroyCmd(std::uintptr_t cmdID) -> std::uintptr_t
 {
-	auto& cmd = store<tea::Cmd>().Get(cmdID);
-	auto msg = store<tea::Msg>().Stow(cmd());
-	store<tea::Cmd>().Destroy(cmdID);
+	auto& cmd = GetStore<tea::Cmd>().Get(cmdID);
+	auto msg = GetStore<tea::Msg>().Stow(cmd());
+	GetStore<tea::Cmd>().Destroy(cmdID);
 	return msg;
 }
 
@@ -168,27 +172,27 @@ auto getMsgIfGoObject(std::uintptr_t msgID) -> std::uintptr_t
 			    return 0;
 		    }
 	    },
-	    store<tea::Msg>().Get(msgID)
+	    GetStore<tea::Msg>().Get(msgID)
 	);
 }
 
 auto stringData(std::uintptr_t stringID) -> const char*
 {
-	return store<std::string>().Get(stringID).data();
+	return GetStore<std::string>().Get(stringID).data();
 }
 
 auto stringSize(std::uintptr_t stringID) -> int
 {
-	return static_cast<int>(store<std::string>().Get(stringID).size());
+	return static_cast<int>(GetStore<std::string>().Get(stringID).size());
 }
 
 void destroyMsg(std::uintptr_t msgID)
 {
-	store<tea::Msg>().Destroy(msgID);
+	GetStore<tea::Msg>().Destroy(msgID);
 }
 
 void destroyString(std::uintptr_t stringID)
 {
-	store<std::string>().Destroy(stringID);
+	GetStore<std::string>().Destroy(stringID);
 }
 }

@@ -2,8 +2,8 @@ module;
 
 #include "libcharm++go.h"
 #include <expected>
-#include <print>
 #include <string_view>
+#include <type_traits>
 #include <utility>
 
 export module charm:bubbletea.logging;

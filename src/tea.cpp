@@ -2,10 +2,8 @@ module;
 
 #include "libcharm++go.h"
 #include <any>
-#include <cstdint>
 #include <expected>
 #include <functional>
-#include <print>
 #include <string>
 #include <variant>
 
@@ -19,8 +17,6 @@ namespace bubbletea
 
 export class UnknownMsg : public go::GoObject
 {
-	friend auto callUpdate(void* modelPtr, MsgType msgType, std::uintptr_t msgValue);
-
   private:
 	using go::GoObject::GoObject;
 };
