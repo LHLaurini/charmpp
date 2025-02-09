@@ -15,13 +15,19 @@ import :go;
 namespace bubbletea
 {
 
-export class UnknownMsg : public go::GoObject
+export class UnknownMsg
 {
-  private:
-	using go::GoObject::GoObject;
 };
 
-export using Msg = std::variant<UnknownMsg, KeyMsg, std::any>;
+export class QuitMsg
+{
+};
+
+export class SuspendMsg
+{
+};
+
+export using Msg = std::variant<UnknownMsg, KeyMsg, QuitMsg, SuspendMsg, std::any>;
 export using Cmd = std::function<Msg()>;
 
 export class ModelBase
@@ -63,14 +69,14 @@ export auto NewProgram(ModelBase& model) -> Program
 	return Program{ ::NewProgram(&model) };
 }
 
-export auto Quit() -> Msg
+export auto Quit() -> QuitMsg
 {
-	return UnknownMsg(::Quit());
+	return {};
 }
 
-export auto Suspend() -> Msg
+export auto Suspend() -> SuspendMsg
 {
-	return UnknownMsg(::Suspend());
+	return {};
 }
 
 }

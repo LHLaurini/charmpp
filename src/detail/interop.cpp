@@ -1,16 +1,19 @@
 module;
 
 #include "libcharm++go.h"
-#include <concepts>
+#include <any>
 #include <cstddef>
 #include <cstdint>
+#include <exception>
 #include <print>
+#include <ranges>
+#include <span>
 #include <string>
 #include <unordered_map>
 #include <utility>
 #include <variant>
 
-export module charm:interop;
+export module charm:interop.detail;
 
 import :bubbletea.tea;
 import :go;
@@ -99,12 +102,68 @@ struct StoreAccessor
 template <typename T>
 static constexpr StoreAccessor<T> GetStore;
 
-// tea::Cmd
-// tea::Msg
-// std::string
+[[nodiscard]] auto ToCppKey(const ::GoKey& key) -> tea::Key
+{
+	return {
+		.Type = static_cast<tea::KeyType>(key.Type),
+		.Runes = std::ranges::to<std::u32string>(std::span(key.Runes, key.NumRunes)),
+		.Alt = key.Alt,
+		.Paste = key.Paste,
+	};
+}
+
+auto FromCppKey(const tea::Key& key) -> ::CppKey
+{
+	return {
+		.Type = key.Type,
+		.Runes = key.Runes.data(),
+		.NumRunes = static_cast<unsigned int>(key.Runes.size()),
+		.Alt = key.Alt,
+		.Paste = key.Paste,
+	};
+}
+
+struct MsgToGo
+{
+	auto operator()(tea::UnknownMsg /*msg*/) const -> MsgTypeAndMsg
+	{
+		// FIXME: throw exception here
+		std::terminate();
+	}
+
+	auto operator()(const tea::KeyMsg& msg) const -> MsgTypeAndMsg
+	{
+		return { MsgTypeKey, ::ToGoKey(FromCppKey(msg)) };
+	}
+
+	auto operator()(tea::QuitMsg /*msg*/) const -> MsgTypeAndMsg
+	{
+		return { MsgTypeQuit, 0 };
+	}
+
+	auto operator()(tea::SuspendMsg /*msg*/) const -> MsgTypeAndMsg
+	{
+		return { MsgTypeSuspend, 0 };
+	}
+
+	auto operator()(std::any msg) const -> MsgTypeAndMsg
+	{
+		return { MsgTypeUser, GetStore<std::any>().Stow(std::move(msg)) };
+	}
+};
 
 extern "C"
 {
+
+auto fromCppKey(uintptr_t id) -> ::CppKey
+{
+	return ::FromCppKey(GetStore<tea::Key>().Get(id));
+}
+
+auto toCppKey(::GoKey key) -> uintptr_t
+{
+	return GetStore<tea::Key>().Stow(::ToCppKey(key));
+}
 
 void toCppString(GoString str, void* stringPtr)
 {
@@ -128,13 +187,19 @@ auto callUpdate(void* modelPtr, MsgType msgType, std::uintptr_t msgValue) -> std
 		switch (msgType)
 		{
 		case MsgType::MsgTypeUnknown:
-			return tea::UnknownMsg(msgValue);
+			return tea::UnknownMsg();
 
 		case MsgType::MsgTypeKey:
-			return tea::KeyMsg(msgValue);
+			return GetStore<tea::Key>().Detach(msgValue);
+
+		case MsgType::MsgTypeQuit:
+			return tea::QuitMsg();
+
+		case MsgType::MsgTypeSuspend:
+			return tea::SuspendMsg();
 
 		case MsgType::MsgTypeUser:
-			return GetStore<tea::Msg>().Detach(msgValue);
+			return GetStore<std::any>().Detach(msgValue);
 		}
 	};
 
@@ -151,29 +216,9 @@ auto callView(void* modelPtr) -> std::uintptr_t
 	return GetStore<std::string>().Stow(static_cast<tea::ModelBase*>(modelPtr)->View());
 }
 
-auto callAndDestroyCmd(std::uintptr_t cmdID) -> std::uintptr_t
+auto callAndDestroyCmd(std::uintptr_t cmdID) -> MsgTypeAndMsg
 {
-	auto& cmd = GetStore<tea::Cmd>().Get(cmdID);
-	auto msg = GetStore<tea::Msg>().Stow(cmd());
-	GetStore<tea::Cmd>().Destroy(cmdID);
-	return msg;
-}
-
-auto getMsgIfGoObject(std::uintptr_t msgID) -> std::uintptr_t
-{
-	return std::visit(
-	    []<typename T>(const T& msg) -> std::uintptr_t {
-		    if constexpr (std::derived_from<T, go::GoObject>)
-		    {
-			    return msg.GetHandle();
-		    }
-		    else
-		    {
-			    return 0;
-		    }
-	    },
-	    GetStore<tea::Msg>().Get(msgID)
-	);
+	return std::visit(MsgToGo{}, GetStore<tea::Cmd>().Detach(cmdID)());
 }
 
 auto stringData(std::uintptr_t stringID) -> const char*

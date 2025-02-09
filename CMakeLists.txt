@@ -24,6 +24,7 @@ target_sources(charm++cpp
 	             # Implementation details
 	             src/detail/go.cpp
 	             src/detail/interop.cpp
+	             src/detail/key.cpp
 	             src/detail/utils.cpp
 )
 

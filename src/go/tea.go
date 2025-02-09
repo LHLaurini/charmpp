@@ -25,13 +25,3 @@ func ProgramRun(programObj goObject) goObject {
 	_, err := cgo.Handle(programObj).Value().(*tea.Program).Run()
 	return toGoObjectOrZero(err)
 }
-
-//export Quit
-func Quit() goObject {
-	return toGoObject(tea.Quit())
-}
-
-//export Suspend
-func Suspend() goObject {
-	return toGoObject(tea.Suspend())
-}
