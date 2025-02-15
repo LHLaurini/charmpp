@@ -71,6 +71,9 @@ target_link_libraries(focus-blur charm++)
 add_executable(debounce examples/debounce/main.cpp)
 target_link_libraries(debounce charm++)
 
+add_executable(fullscreen examples/fullscreen/main.cpp)
+target_link_libraries(fullscreen charm++)
+
 add_executable(mouse examples/mouse/main.cpp)
 target_link_libraries(mouse charm++)
 
