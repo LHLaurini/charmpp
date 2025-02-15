@@ -11,6 +11,7 @@ module;
 
 export module charm:bubbletea.tea;
 
+import :bubbletea.focus;
 import :bubbletea.key;
 import :bubbletea.mouse;
 import :bubbletea.options;
@@ -37,7 +38,7 @@ export class SuspendMsg
 {
 };
 
-export using Msg = std::variant<UnknownMsg, InternalMsg, KeyMsg, MouseEvent, QuitMsg, SuspendMsg, std::any>;
+export using Msg = std::variant<UnknownMsg, InternalMsg, BlurMsg, FocusMsg, KeyMsg, MouseEvent, QuitMsg, SuspendMsg, std::any>;
 export using Cmd = std::function<Msg()>;
 
 export class ModelBase
