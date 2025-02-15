@@ -11,3 +11,8 @@ import (
 func WithMouseAllMotion() goObject {
 	return toGoObject(tea.WithMouseAllMotion())
 }
+
+//export WithReportFocus
+func WithReportFocus() goObject {
+	return toGoObject(tea.WithReportFocus())
+}

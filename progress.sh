@@ -6,6 +6,8 @@ progress()
 		func LogToFile
 			caveats
 			note "<code>go::File</code> cannot be used from C++"
+		type BlurMsg
+			implemented
 		type Cmd
 			implemented
 		type Printf
@@ -16,6 +18,8 @@ progress()
 		type Tick
 			implemented
 			note "Callback receives no arguments. Use <code>std::chrono</code> to get the time"
+		type FocusMsg
+			implemented
 		type Key
 			implemented
 		func "(Key) String"
@@ -57,6 +61,8 @@ progress()
 		type ProgramOption
 			implemented
 		func WithMouseAllMotion
+			implemented
+		func WithReportFocus
 			implemented
 		type QuitMsg
 			implemented

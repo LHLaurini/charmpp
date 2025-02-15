@@ -25,6 +25,10 @@ func typeFromMsg(msg tea.Msg) C.MsgType {
 		return C.MsgTypeSuspend
 	case tea.QuitMsg:
 		return C.MsgTypeQuit
+	case tea.BlurMsg:
+		return C.MsgTypeBlur
+	case tea.FocusMsg:
+		return C.MsgTypeFocus
 	default:
 		return C.MsgTypeUnknown
 	}
@@ -41,6 +45,10 @@ func valueFromMsg(msg tea.Msg) C.uintptr_t {
 	case tea.SuspendMsg:
 		return 0
 	case tea.QuitMsg:
+		return 0
+	case tea.BlurMsg:
+		return 0
+	case tea.FocusMsg:
 		return 0
 	default:
 		return 0
@@ -74,6 +82,12 @@ func makeCmd(cmdID C.uintptr_t) tea.Cmd {
 
 		case C.MsgTypeSuspend:
 			return tea.Suspend()
+
+		case C.MsgTypeBlur:
+			return tea.BlurMsg{}
+
+		case C.MsgTypeFocus:
+			return tea.FocusMsg{}
 
 		default:
 			log.Fatal("unknown message type received")

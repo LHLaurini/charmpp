@@ -22,6 +22,8 @@ typedef enum
 	MsgTypeMouse,
 	MsgTypeQuit,
 	MsgTypeSuspend,
+	MsgTypeBlur,
+	MsgTypeFocus,
 } MsgType;
 
 typedef struct

@@ -20,4 +20,9 @@ auto WithMouseAllMotion()
 	return ProgramOption(::WithMouseAllMotion());
 }
 
+auto WithReportFocus()
+{
+	return ProgramOption(::WithReportFocus());
+}
+
 }

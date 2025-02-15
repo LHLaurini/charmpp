@@ -34,10 +34,10 @@
     <tbody>
         <tr>
             <td>Bubble Tea</td>
-            <td align="center">27</td>
+            <td align="center">30</td>
             <td align="center">0</td>
             <td align="center">80</td>
-            <td align="center">33.8%</td>
+            <td align="center">37.5%</td>
         </tr>
         <tr>
             <td>Bubbles/cursor</td>
@@ -169,10 +169,10 @@
     <tfoot>
         <tr>
             <th>Total</td>
-            <th>27</td>
+            <th>30</td>
             <th>0</td>
             <th>657</td>
-            <th>4.1%</td>
+            <th>4.6%</td>
         </tr>
     </tfoot>
 </table>
@@ -193,7 +193,7 @@
 		<tr><td>func</td><td colspan=2>LogToFile</td><td align="center">:warning:</td><td><code>go::File</code> cannot be used from C++</td></tr>
 		<tr><td>func</td><td colspan=2>LogToFileWith</td><td align="center">:x:</td><td></td></tr>
 		<tr><td>type</td><td colspan=2>BatchMsg</td><td align="center">:x:</td><td></td></tr>
-		<tr><td>type</td><td colspan=2>BlurMsg</td><td align="center">:x:</td><td></td></tr>
+		<tr><td>type</td><td colspan=2>BlurMsg</td><td align="center">:heavy_check_mark:</td><td></td></tr>
 		<tr><td>type</td><td colspan=2>Cmd</td><td align="center">:heavy_check_mark:</td><td></td></tr>
 		<tr><td>func</td><td colspan=2>Batch</td><td align="center">:x:</td><td></td></tr>
 		<tr><td>func</td><td colspan=2>Every</td><td align="center">:x:</td><td></td></tr>
@@ -207,7 +207,7 @@
 		<tr><td>func</td><td colspan=2>WindowSize</td><td align="center">:x:</td><td></td></tr>
 		<tr><td>type</td><td colspan=2>ExecCallback</td><td align="center">:x:</td><td></td></tr>
 		<tr><td>type</td><td colspan=2>ExecCommand</td><td align="center">:x:</td><td></td></tr>
-		<tr><td>type</td><td colspan=2>FocusMsg</td><td align="center">:x:</td><td></td></tr>
+		<tr><td>type</td><td colspan=2>FocusMsg</td><td align="center">:heavy_check_mark:</td><td></td></tr>
 		<tr><td>type</td><td colspan=2>Key</td><td align="center">:heavy_check_mark:</td><td></td></tr>
 		<tr><td>func</td><td>(Key)</td><td>String</td><td align="center">:heavy_check_mark:</td><td></td></tr>
 		<tr><td>type</td><td colspan=2>KeyMsg</td><td align="center">:heavy_check_mark:</td><td><code>KeyMsg</code> is an alias for <code>Key</code></td></tr>
@@ -260,7 +260,7 @@
 		<tr><td>func</td><td colspan=2>WithMouseAllMotion</td><td align="center">:heavy_check_mark:</td><td></td></tr>
 		<tr><td>func</td><td colspan=2>WithMouseCellMotion</td><td align="center">:x:</td><td></td></tr>
 		<tr><td>func</td><td colspan=2>WithOutput</td><td align="center">:x:</td><td></td></tr>
-		<tr><td>func</td><td colspan=2>WithReportFocus</td><td align="center">:x:</td><td></td></tr>
+		<tr><td>func</td><td colspan=2>WithReportFocus</td><td align="center">:heavy_check_mark:</td><td></td></tr>
 		<tr><td>func</td><td colspan=2>WithoutBracketedPaste</td><td align="center">:x:</td><td></td></tr>
 		<tr><td>func</td><td colspan=2>WithoutCatchPanics</td><td align="center">:x:</td><td></td></tr>
 		<tr><td>func</td><td colspan=2>WithoutRenderer</td><td align="center">:x:</td><td></td></tr>

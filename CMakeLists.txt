@@ -16,6 +16,7 @@ target_sources(charm++cpp
 
 	             # Public API
 	             src/commands.cpp
+	             src/focus.cpp
 	             src/go.cpp
 	             src/key.cpp
 	             src/logging.cpp

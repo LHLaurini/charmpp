@@ -15,6 +15,7 @@ module;
 
 export module charm:interop.detail;
 
+import :bubbletea.focus;
 import :bubbletea.tea;
 import :go;
 
@@ -182,6 +183,16 @@ struct MsgToGo
 		return { MsgTypeSuspend, 0 };
 	}
 
+	auto operator()(tea::BlurMsg /*msg*/) const -> MsgTypeAndMsg
+	{
+		return { MsgTypeBlur, 0 };
+	}
+
+	auto operator()(tea::FocusMsg /*msg*/) const -> MsgTypeAndMsg
+	{
+		return { MsgTypeFocus, 0 };
+	}
+
 	auto operator()(std::any msg) const -> MsgTypeAndMsg
 	{
 		return { MsgTypeUser, GetStore<std::any>().Stow(std::move(msg)) };
@@ -246,6 +257,12 @@ auto callUpdate(void* modelPtr, MsgType msgType, std::uintptr_t msgValue) -> std
 
 		case MsgType::MsgTypeSuspend:
 			return tea::SuspendMsg();
+
+		case MsgType::MsgTypeBlur:
+			return tea::BlurMsg();
+
+		case MsgType::MsgTypeFocus:
+			return tea::FocusMsg();
 
 		case MsgType::MsgTypeUser:
 			return GetStore<std::any>().Detach(msgValue);
