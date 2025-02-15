@@ -20,9 +20,11 @@ typedef enum
 	MsgTypeInternal,
 	MsgTypeBlur,
 	MsgTypeFocus,
+	MsgTypeInterrupt,
 	MsgTypeKey,
 	MsgTypeMouse,
 	MsgTypeQuit,
+	MsgTypeResume,
 	MsgTypeSuspend,
 } MsgType;
 

@@ -21,10 +21,14 @@ func typeFromMsg(msg tea.Msg) C.MsgType {
 		return C.MsgTypeBlur
 	case tea.FocusMsg:
 		return C.MsgTypeFocus
+	case tea.InterruptMsg:
+		return C.MsgTypeInterrupt
 	case tea.KeyMsg:
 		return C.MsgTypeKey
 	case tea.MouseMsg:
 		return C.MsgTypeMouse
+	case tea.ResumeMsg:
+		return C.MsgTypeResume
 	case tea.SuspendMsg:
 		return C.MsgTypeSuspend
 	case tea.QuitMsg:
@@ -42,10 +46,14 @@ func valueFromMsg(msg tea.Msg) C.uintptr_t {
 		return 0
 	case tea.FocusMsg:
 		return 0
+	case tea.InterruptMsg:
+		return 0
 	case tea.KeyMsg:
 		return toCppKey(tea.Key(msg))
 	case tea.MouseMsg:
 		return toCppMouseEvent(tea.MouseEvent(msg))
+	case tea.ResumeMsg:
+		return 0
 	case tea.SuspendMsg:
 		return 0
 	case tea.QuitMsg:
@@ -83,8 +91,14 @@ func makeCmd(cmdID C.uintptr_t) tea.Cmd {
 		case C.MsgTypeFocus:
 			return tea.FocusMsg{}
 
+		case C.MsgTypeInterrupt:
+			return tea.InterruptMsg{}
+
 		case C.MsgTypeQuit:
 			return tea.Quit()
+
+		case C.MsgTypeResume:
+			return tea.ResumeMsg{}
 
 		case C.MsgTypeSuspend:
 			return tea.Suspend()

@@ -34,10 +34,10 @@
     <tbody>
         <tr>
             <td>Bubble Tea</td>
-            <td align="center">32</td>
+            <td align="center">35</td>
             <td align="center">0</td>
             <td align="center">82</td>
-            <td align="center">39.0%</td>
+            <td align="center">42.7%</td>
         </tr>
         <tr>
             <td>Bubbles/cursor</td>
@@ -169,10 +169,10 @@
     <tfoot>
         <tr>
             <th>Total</td>
-            <th>32</td>
+            <th>35</td>
             <th>0</td>
             <th>659</td>
-            <th>4.9%</td>
+            <th>5.3%</td>
         </tr>
     </tfoot>
 </table>
@@ -208,7 +208,7 @@
 		<tr><td>type</td><td colspan=2>ExecCallback</td><td align="center">:x:</td><td></td></tr>
 		<tr><td>type</td><td colspan=2>ExecCommand</td><td align="center">:x:</td><td></td></tr>
 		<tr><td>type</td><td colspan=2>FocusMsg</td><td align="center">:heavy_check_mark:</td><td></td></tr>
-		<tr><td>type</td><td colspan=2>InterruptMsg</td><td align="center">:x:</td><td></td></tr>
+		<tr><td>type</td><td colspan=2>InterruptMsg</td><td align="center">:heavy_check_mark:</td><td></td></tr>
 		<tr><td>type</td><td colspan=2>Key</td><td align="center">:heavy_check_mark:</td><td></td></tr>
 		<tr><td>func</td><td>(Key)</td><td>String</td><td align="center">:heavy_check_mark:</td><td></td></tr>
 		<tr><td>type</td><td colspan=2>KeyMsg</td><td align="center">:heavy_check_mark:</td><td><code>KeyMsg</code> is an alias for <code>Key</code></td></tr>
@@ -236,7 +236,7 @@
 		<tr><td>func</td><td colspan=2>EnterAltScreen</td><td align="center">:x:</td><td></td></tr>
 		<tr><td>func</td><td colspan=2>ExitAltScreen</td><td align="center">:x:</td><td></td></tr>
 		<tr><td>func</td><td colspan=2>HideCursor</td><td align="center">:x:</td><td></td></tr>
-		<tr><td>func</td><td colspan=2>Interrupt</td><td align="center">:x:</td><td></td></tr>
+		<tr><td>func</td><td colspan=2>Interrupt</td><td align="center">:heavy_check_mark:</td><td></td></tr>
 		<tr><td>func</td><td colspan=2>Quit</td><td align="center">:heavy_check_mark:</td><td></td></tr>
 		<tr><td>func</td><td colspan=2>ShowCursor</td><td align="center">:x:</td><td></td></tr>
 		<tr><td>func</td><td colspan=2>Suspend</td><td align="center">:heavy_check_mark:</td><td></td></tr>
@@ -269,7 +269,7 @@
 		<tr><td>func</td><td colspan=2>WithoutSignalHandler</td><td align="center">:x:</td><td></td></tr>
 		<tr><td>func</td><td colspan=2>WithoutSignals</td><td align="center">:x:</td><td></td></tr>
 		<tr><td>type</td><td colspan=2>QuitMsg</td><td align="center">:heavy_check_mark:</td><td></td></tr>
-		<tr><td>type</td><td colspan=2>ResumeMsg</td><td align="center">:x:</td><td></td></tr>
+		<tr><td>type</td><td colspan=2>ResumeMsg</td><td align="center">:heavy_check_mark:</td><td></td></tr>
 		<tr><td>type</td><td colspan=2>SuspendMsg</td><td align="center">:heavy_check_mark:</td><td></td></tr>
 		<tr><td>type</td><td colspan=2>WindowSizeMsg</td><td align="center">:x:</td><td></td></tr>
 	<tr><td rowspan=15>Bubbles/<br>cursor</td></tr>

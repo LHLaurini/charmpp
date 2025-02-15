@@ -20,6 +20,8 @@ progress()
 			note "Callback receives no arguments. Use <code>std::chrono</code> to get the time"
 		type FocusMsg
 			implemented
+		type InterruptMsg
+			implemented
 		type Key
 			implemented
 		func "(Key) String"
@@ -50,6 +52,8 @@ progress()
 			implemented
 		type Msg
 			implemented
+		func Interrupt
+			implemented
 		func Quit
 			implemented
 		func Suspend
@@ -69,6 +73,8 @@ progress()
 		func WithReportFocus
 			implemented
 		type QuitMsg
+			implemented
+		type ResumeMsg
 			implemented
 		type SuspendMsg
 			implemented

@@ -30,7 +30,15 @@ export struct InternalMsg
 	uintptr_t Handle;
 };
 
+export class InterruptMsg
+{
+};
+
 export class QuitMsg
+{
+};
+
+export class ResumeMsg
 {
 };
 
@@ -38,7 +46,9 @@ export class SuspendMsg
 {
 };
 
-export using Msg = std::variant<UnknownMsg, InternalMsg, BlurMsg, FocusMsg, KeyMsg, MouseEvent, QuitMsg, SuspendMsg, std::any>;
+export using Msg = std::variant<
+    UnknownMsg, InternalMsg, BlurMsg, FocusMsg, InterruptMsg, KeyMsg, MouseEvent, QuitMsg,
+    ResumeMsg, SuspendMsg, std::any>;
 export using Cmd = std::function<Msg()>;
 
 export class ModelBase
@@ -78,6 +88,11 @@ export auto NewProgram(ModelBase& model, std::same_as<ProgramOption> auto... opt
 {
 	std::array<std::uintptr_t, sizeof...(opts)> optionArray{ opts.GetHandle()... };
 	return Program{ ::NewProgram(&model, optionArray.data(), optionArray.size()) };
+}
+
+export auto Interrupt() -> InterruptMsg
+{
+	return {};
 }
 
 export auto Quit() -> QuitMsg

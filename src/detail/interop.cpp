@@ -173,6 +173,11 @@ struct MsgToGo
 		return { MsgTypeFocus, 0 };
 	}
 
+	auto operator()(tea::InterruptMsg /*msg*/) const -> MsgTypeAndMsg
+	{
+		return { MsgTypeInterrupt, 0 };
+	}
+
 	auto operator()(const tea::KeyMsg& msg) const -> MsgTypeAndMsg
 	{
 		return { MsgTypeKey, ::ToGoKey(FromCppKey(msg)) };
@@ -186,6 +191,11 @@ struct MsgToGo
 	auto operator()(tea::QuitMsg /*msg*/) const -> MsgTypeAndMsg
 	{
 		return { MsgTypeQuit, 0 };
+	}
+
+	auto operator()(tea::ResumeMsg /*msg*/) const -> MsgTypeAndMsg
+	{
+		return { MsgTypeResume, 0 };
 	}
 
 	auto operator()(tea::SuspendMsg /*msg*/) const -> MsgTypeAndMsg
@@ -252,6 +262,9 @@ auto callUpdate(void* modelPtr, MsgType msgType, std::uintptr_t msgValue) -> std
 		case MsgType::MsgTypeFocus:
 			return tea::FocusMsg();
 
+		case MsgType::MsgTypeInterrupt:
+			return tea::InterruptMsg();
+
 		case MsgType::MsgTypeKey:
 			return GetStore<tea::Key>().Detach(msgValue);
 
@@ -260,6 +273,9 @@ auto callUpdate(void* modelPtr, MsgType msgType, std::uintptr_t msgValue) -> std
 
 		case MsgType::MsgTypeQuit:
 			return tea::QuitMsg();
+
+		case MsgType::MsgTypeResume:
+			return tea::ResumeMsg();
 
 		case MsgType::MsgTypeSuspend:
 			return tea::SuspendMsg();
