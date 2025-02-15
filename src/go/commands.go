@@ -17,3 +17,8 @@ func Tick(durationNS int) {
 	// internal Goroutines.
 	tea.Tick(time.Duration(durationNS), func(time.Time) tea.Msg { return nil })()
 }
+
+//export WindowSize
+func WindowSize() goObject {
+	return toGoObject(tea.WindowSize()())
+}

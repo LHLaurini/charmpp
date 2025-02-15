@@ -22,6 +22,7 @@ target_sources(charm++cpp
 	             src/logging.cpp
 	             src/mouse.cpp
 	             src/options.cpp
+	             src/screen.cpp
 	             src/standard_renderer.cpp
 	             src/tea.cpp
 	             src/utils.cpp

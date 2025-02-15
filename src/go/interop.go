@@ -34,6 +34,8 @@ func typeFromMsg(msg tea.Msg) C.MsgType {
 		return C.MsgTypeSuspend
 	case tea.QuitMsg:
 		return C.MsgTypeQuit
+	case tea.WindowSizeMsg:
+		return C.MsgTypeWindowSize
 	default:
 		return C.MsgTypeUnknown
 	}
@@ -59,6 +61,8 @@ func valueFromMsg(msg tea.Msg) C.uintptr_t {
 		return 0
 	case tea.QuitMsg:
 		return 0
+	case tea.WindowSizeMsg:
+		return toCppWindowSizeMsg(msg)
 	default:
 		return 0
 	}
@@ -81,6 +85,8 @@ func makeCmd(cmdID C.uintptr_t) tea.Cmd {
 		case C.MsgTypeKey:
 			fallthrough
 		case C.MsgTypeMouse:
+			fallthrough
+		case C.MsgTypeWindowSize:
 			handle := cgo.Handle(msg.Msg)
 			goMsg := handle.Value().(tea.Msg)
 			handle.Delete()
@@ -168,6 +174,13 @@ func fromCppMouseEvent(mouseEvent C.InterMouseEvent) tea.MouseEvent {
 	}
 }
 
+func fromCppWindowSizeMsg(windowSizeMsg C.WindowSizeMsg) tea.WindowSizeMsg {
+	return tea.WindowSizeMsg{
+		Width:  int(windowSizeMsg.Width),
+		Height: int(windowSizeMsg.Height),
+	}
+}
+
 func toCppMouseEvent(mouseEvent tea.MouseEvent) C.uintptr_t {
 	return C.toCppMouseEvent(C.InterMouseEvent{
 		X:      C.int(mouseEvent.X),
@@ -180,6 +193,13 @@ func toCppMouseEvent(mouseEvent tea.MouseEvent) C.uintptr_t {
 	})
 }
 
+func toCppWindowSizeMsg(windowSizeMsg tea.WindowSizeMsg) C.uintptr_t {
+	return C.toCppWindowSizeMsg(C.WindowSizeMsg{
+		Width:  C.int(windowSizeMsg.Width),
+		Height: C.int(windowSizeMsg.Height),
+	})
+}
+
 //export ToGoKey
 func ToGoKey(key C.CppKey) goObject {
 	return toGoObject(fromCppKey(key))
@@ -188,6 +208,11 @@ func ToGoKey(key C.CppKey) goObject {
 //export ToGoMouseEvent
 func ToGoMouseEvent(mouseEvent C.InterMouseEvent) goObject {
 	return toGoObject(fromCppMouseEvent(mouseEvent))
+}
+
+//export ToGoWindowSizeMsg
+func ToGoWindowSizeMsg(windowSizeMsg C.WindowSizeMsg) goObject {
+	return toGoObject(fromCppWindowSizeMsg(windowSizeMsg))
 }
 
 //export Println

@@ -26,6 +26,7 @@ typedef enum
 	MsgTypeQuit,
 	MsgTypeResume,
 	MsgTypeSuspend,
+	MsgTypeWindowSize,
 } MsgType;
 
 typedef enum
@@ -68,6 +69,12 @@ typedef struct
 
 typedef struct
 {
+	int Width;
+	int Height;
+} WindowSizeMsg;
+
+typedef struct
+{
 	MsgType Type;
 	uintptr_t Msg;
 } MsgTypeAndMsg;
@@ -75,6 +82,7 @@ typedef struct
 CppKey fromCppKey(uintptr_t id);
 uintptr_t toCppKey(GoKey key);
 uintptr_t toCppMouseEvent(InterMouseEvent mouseEvent);
+uintptr_t toCppWindowSizeMsg(WindowSizeMsg windowSizeMsg);
 void toCppString(_GoString_ str, void* stringPtr);
 uintptr_t callInit(void* modelPtr);
 uintptr_t callUpdate(void* modelPtr, MsgType msgType, uintptr_t msgValue);

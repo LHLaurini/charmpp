@@ -8,6 +8,7 @@ export module charm:bubbletea.commands;
 
 import :go;
 import :bubbletea.tea;
+import :utils;
 
 export namespace bubbletea
 {
@@ -20,6 +21,13 @@ auto Tick(std::chrono::nanoseconds duration, TickCallback callback) -> Cmd
 	return [callback = std::move(callback), duration] -> Msg {
 		::Tick(duration.count());
 		return callback();
+	};
+}
+
+auto WindowSize() -> Cmd
+{
+	return [] -> InternalMsg {
+		return { utils::CgoCall(::WindowSize) };
 	};
 }
 

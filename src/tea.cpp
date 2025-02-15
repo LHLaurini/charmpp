@@ -48,7 +48,7 @@ export class SuspendMsg
 
 export using Msg = std::variant<
     UnknownMsg, InternalMsg, BlurMsg, FocusMsg, InterruptMsg, KeyMsg, MouseEvent, QuitMsg,
-    ResumeMsg, SuspendMsg, std::any>;
+    ResumeMsg, SuspendMsg, WindowSizeMsg, std::any>;
 export using Cmd = std::function<Msg()>;
 
 export class ModelBase

@@ -15,9 +15,11 @@ progress()
 			note "Implemented as <code>Print</code>, uses <code>std::format_string</code> instead of <code>printf</code>-style format strings"
 		type Println
 			implemented
-		type Tick
+		func Tick
 			implemented
 			note "Callback receives no arguments. Use <code>std::chrono</code> to get the time"
+		func WindowSize
+			implemented
 		type FocusMsg
 			implemented
 		type InterruptMsg
@@ -77,6 +79,8 @@ progress()
 		type ResumeMsg
 			implemented
 		type SuspendMsg
+			implemented
+		type WindowSizeMsg
 			implemented
 
 	package Bubbles/cursor bubbles/cursor

@@ -17,6 +17,7 @@ export module charm:interop.detail;
 
 import :bubbletea.focus;
 import :bubbletea.tea;
+import :bubbletea.screen;
 import :go;
 
 namespace tea = bubbletea;
@@ -150,6 +151,22 @@ auto FromCppMouseEvent(const tea::MouseEvent& mouseEvent) -> ::InterMouseEvent
 	};
 }
 
+[[nodiscard]] auto ToCppWindowSizeMsg(const ::WindowSizeMsg& windowSizeMsg) -> tea::WindowSizeMsg
+{
+	return {
+		.Width = windowSizeMsg.Width,
+		.Height = windowSizeMsg.Height,
+	};
+}
+
+auto FromCppWindowSizeMsg(const tea::WindowSizeMsg& windowSizeMsg) -> ::WindowSizeMsg
+{
+	return {
+		.Width = windowSizeMsg.Width,
+		.Height = windowSizeMsg.Height,
+	};
+}
+
 struct MsgToGo
 {
 	auto operator()(tea::UnknownMsg /*msg*/) const -> MsgTypeAndMsg
@@ -203,6 +220,11 @@ struct MsgToGo
 		return { MsgTypeSuspend, 0 };
 	}
 
+	auto operator()(tea::WindowSizeMsg msg) const -> MsgTypeAndMsg
+	{
+		return { MsgTypeSuspend, ::ToGoWindowSizeMsg(FromCppWindowSizeMsg(msg)) };
+	}
+
 	auto operator()(std::any msg) const -> MsgTypeAndMsg
 	{
 		return { MsgTypeUser, GetStore<std::any>().Stow(std::move(msg)) };
@@ -225,6 +247,11 @@ auto toCppKey(::GoKey key) -> uintptr_t
 auto toCppMouseEvent(InterMouseEvent mouseEvent) -> uintptr_t
 {
 	return GetStore<tea::MouseEvent>().Stow(::ToCppMouseEvent(mouseEvent));
+}
+
+auto toCppWindowSizeMsg(WindowSizeMsg windowSizeMsg) -> uintptr_t
+{
+	return GetStore<tea::WindowSizeMsg>().Stow(::ToCppWindowSizeMsg(windowSizeMsg));
 }
 
 void toCppString(GoString str, void* stringPtr)
@@ -279,6 +306,9 @@ auto callUpdate(void* modelPtr, MsgType msgType, std::uintptr_t msgValue) -> std
 
 		case MsgType::MsgTypeSuspend:
 			return tea::SuspendMsg();
+
+		case MsgType::MsgTypeWindowSize:
+			return GetStore<tea::WindowSizeMsg>().Detach(msgValue);
 
 		case MsgType::MsgTypeUser:
 			return GetStore<std::any>().Detach(msgValue);
