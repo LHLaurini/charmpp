@@ -4,6 +4,7 @@ package main
 import "C"
 
 import (
+	"errors"
 	"fmt"
 	"log"
 	"os"
@@ -217,4 +218,15 @@ func FileClose(object goObject) {
 //export DeleteHandle
 func DeleteHandle(handle goObject) {
 	cgo.Handle(handle).Delete()
+}
+
+//export IdentifyError
+func IdentifyError(handle goObject) C.Err {
+	err := cgo.Handle(handle).Value().(error)
+	if errors.Is(err, tea.ErrProgramKilled) {
+		return C.ErrProgramKilled
+	} else if errors.Is(err, tea.ErrInterrupted) {
+		return C.ErrInterrupted
+	}
+	return C.ErrUnknown
 }

@@ -76,7 +76,7 @@ auto VisitMsg(tea::Msg& msg, First firstVisitor, Others... otherVisitors) -> tea
 
 [[noreturn]] auto ThrowGoError(const go::error& err) -> go::error
 {
-	throw std::runtime_error(err.Error());
+	err.Throw();
 }
 
 [[nodiscard]] auto Getenv(const std::string& name) -> std::optional<std::string_view>

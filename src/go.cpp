@@ -2,11 +2,27 @@ module;
 
 #include "libcharm++go.h"
 #include <concepts>
+#include <stdexcept>
 #include <string>
 
 export module charm:go;
 
 import :go.detail;
+
+export namespace bubbletea
+{
+
+struct ErrProgramKilled : std::runtime_error
+{
+	using std::runtime_error::runtime_error;
+};
+
+struct ErrInterrupted : std::runtime_error
+{
+	using std::runtime_error::runtime_error;
+};
+
+}
 
 export namespace go
 {
@@ -21,6 +37,20 @@ class error : GoObject
 	[[nodiscard]] auto Error() const
 	{
 		return GoObject(::Error(GetHandle())).ToString();
+	}
+
+	[[noreturn]] auto Throw() const
+	{
+		auto str = Error();
+		switch (::IdentifyError(GetHandle()))
+		{
+		case ::ErrUnknown:
+			throw std::runtime_error(str);
+		case ::ErrProgramKilled:
+			throw bubbletea::ErrProgramKilled(str);
+		case ::ErrInterrupted:
+			throw bubbletea::ErrInterrupted(str);
+		}
 	}
 };
 

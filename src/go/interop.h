@@ -28,6 +28,13 @@ typedef enum
 	MsgTypeSuspend,
 } MsgType;
 
+typedef enum
+{
+	ErrUnknown,
+	ErrProgramKilled,
+	ErrInterrupted,
+} Err;
+
 typedef struct
 {
 	int Type;
