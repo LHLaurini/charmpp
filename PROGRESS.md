@@ -34,10 +34,10 @@
     <tbody>
         <tr>
             <td>Bubble Tea</td>
-            <td align="center">26</td>
+            <td align="center">27</td>
             <td align="center">0</td>
             <td align="center">80</td>
-            <td align="center">32.5%</td>
+            <td align="center">33.8%</td>
         </tr>
         <tr>
             <td>Bubbles/cursor</td>
@@ -169,10 +169,10 @@
     <tfoot>
         <tr>
             <th>Total</td>
-            <th>26</td>
+            <th>27</td>
             <th>0</td>
             <th>657</td>
-            <th>4.0%</td>
+            <th>4.1%</td>
         </tr>
     </tfoot>
 </table>
@@ -203,7 +203,7 @@
 		<tr><td>func</td><td colspan=2>Println</td><td align="center">:heavy_check_mark:</td><td></td></tr>
 		<tr><td>func</td><td colspan=2>Sequence</td><td align="center">:x:</td><td></td></tr>
 		<tr><td>func</td><td colspan=2>SetWindowTitle</td><td align="center">:x:</td><td></td></tr>
-		<tr><td>func</td><td colspan=2>Tick</td><td align="center">:x:</td><td></td></tr>
+		<tr><td>func</td><td colspan=2>Tick</td><td align="center">:heavy_check_mark:</td><td>Callback receives no arguments. Use <code>std::chrono</code> to get the time</td></tr>
 		<tr><td>func</td><td colspan=2>WindowSize</td><td align="center">:x:</td><td></td></tr>
 		<tr><td>type</td><td colspan=2>ExecCallback</td><td align="center">:x:</td><td></td></tr>
 		<tr><td>type</td><td colspan=2>ExecCommand</td><td align="center">:x:</td><td></td></tr>

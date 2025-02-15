@@ -13,6 +13,9 @@ progress()
 			note "Implemented as <code>Print</code>, uses <code>std::format_string</code> instead of <code>printf</code>-style format strings"
 		type Println
 			implemented
+		type Tick
+			implemented
+			note "Callback receives no arguments. Use <code>std::chrono</code> to get the time"
 		type Key
 			implemented
 		func "(Key) String"

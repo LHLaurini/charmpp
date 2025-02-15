@@ -1,4 +1,5 @@
 export module charm;
+export import :bubbletea.commands;
 export import :bubbletea.key;
 export import :bubbletea.logging;
 export import :bubbletea.mouse;

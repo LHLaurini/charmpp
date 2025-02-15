@@ -15,6 +15,7 @@ target_sources(charm++cpp
 	       FILES src/charm.cpp
 
 	             # Public API
+	             src/commands.cpp
 	             src/go.cpp
 	             src/key.cpp
 	             src/logging.cpp
@@ -40,6 +41,7 @@ add_custom_command(
 	MAIN_DEPENDENCY src/go/main.go
 	DEPENDS src/go/go.mod
 	        src/go/go.sum
+	        src/go/commands.go
 	        src/go/goobject.go
 	        src/go/interop.go
 	        src/go/interop.h
