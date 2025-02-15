@@ -62,5 +62,8 @@ target_link_libraries(charm++go INTERFACE charm++cpp)
 add_library(charm++ INTERFACE)
 target_link_libraries(charm++ INTERFACE charm++go)
 
+add_executable(mouse examples/mouse/main.cpp)
+target_link_libraries(mouse charm++)
+
 add_executable(simple examples/simple/main.cpp)
 target_link_libraries(simple charm++)
