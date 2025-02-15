@@ -18,40 +18,40 @@ import :bubbletea.options;
 import :bubbletea.standard_renderer.detail;
 import :go;
 
-namespace bubbletea
+export namespace bubbletea
 {
 
-export class UnknownMsg
+class UnknownMsg
 {
 };
 
-export struct InternalMsg
+struct InternalMsg
 {
 	uintptr_t Handle;
 };
 
-export class InterruptMsg
+class InterruptMsg
 {
 };
 
-export class QuitMsg
+class QuitMsg
 {
 };
 
-export class ResumeMsg
+class ResumeMsg
 {
 };
 
-export class SuspendMsg
+class SuspendMsg
 {
 };
 
-export using Msg = std::variant<
+using Msg = std::variant<
     UnknownMsg, InternalMsg, BlurMsg, FocusMsg, InterruptMsg, KeyMsg, MouseEvent, QuitMsg,
     ResumeMsg, SuspendMsg, WindowSizeMsg, std::any>;
-export using Cmd = std::function<Msg()>;
+using Cmd = std::function<Msg()>;
 
-export class ModelBase
+class ModelBase
 {
   public:
 	ModelBase() = default;
@@ -66,7 +66,7 @@ export class ModelBase
 	virtual auto View() -> std::string = 0;
 };
 
-export class Program : go::GoObject
+class Program : go::GoObject
 {
 	friend auto NewProgram(ModelBase& model) -> Program;
 
@@ -84,23 +84,23 @@ export class Program : go::GoObject
 	using go::GoObject::GoObject;
 };
 
-export auto NewProgram(ModelBase& model, std::same_as<ProgramOption> auto... opts) -> Program
+auto NewProgram(ModelBase& model, std::same_as<ProgramOption> auto... opts) -> Program
 {
 	std::array<std::uintptr_t, sizeof...(opts)> optionArray{ opts.GetHandle()... };
 	return Program{ ::NewProgram(&model, optionArray.data(), optionArray.size()) };
 }
 
-export auto Interrupt() -> InterruptMsg
+auto Interrupt() -> InterruptMsg
 {
 	return {};
 }
 
-export auto Quit() -> QuitMsg
+auto Quit() -> QuitMsg
 {
 	return {};
 }
 
-export auto Suspend() -> SuspendMsg
+auto Suspend() -> SuspendMsg
 {
 	return {};
 }
