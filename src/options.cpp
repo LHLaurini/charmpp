@@ -15,6 +15,11 @@ class ProgramOption : public go::GoObject
 	using go::GoObject::GoObject;
 };
 
+auto WithAltScreen()
+{
+	return ProgramOption(::WithAltScreen());
+}
+
 auto WithMouseAllMotion()
 {
 	return ProgramOption(::WithMouseAllMotion());

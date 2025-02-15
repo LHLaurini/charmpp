@@ -34,10 +34,10 @@
     <tbody>
         <tr>
             <td>Bubble Tea</td>
-            <td align="center">31</td>
+            <td align="center">32</td>
             <td align="center">0</td>
             <td align="center">80</td>
-            <td align="center">38.8%</td>
+            <td align="center">40.0%</td>
         </tr>
         <tr>
             <td>Bubbles/cursor</td>
@@ -169,10 +169,10 @@
     <tfoot>
         <tr>
             <th>Total</td>
-            <th>31</td>
+            <th>32</td>
             <th>0</td>
             <th>657</td>
-            <th>4.7%</td>
+            <th>4.9%</td>
         </tr>
     </tfoot>
 </table>
@@ -250,7 +250,7 @@
 		<tr><td>func</td><td>(*Program)</td><td>Send</td><td align="center">:x:</td><td></td></tr>
 		<tr><td>func</td><td>(*Program)</td><td>Wait</td><td align="center">:x:</td><td></td></tr>
 		<tr><td>type</td><td colspan=2>ProgramOption</td><td align="center">:heavy_check_mark:</td><td></td></tr>
-		<tr><td>func</td><td colspan=2>WithAltScreen</td><td align="center">:x:</td><td></td></tr>
+		<tr><td>func</td><td colspan=2>WithAltScreen</td><td align="center">:heavy_check_mark:</td><td></td></tr>
 		<tr><td>func</td><td colspan=2>WithContext</td><td align="center">:x:</td><td></td></tr>
 		<tr><td>func</td><td colspan=2>WithEnvironment</td><td align="center">:x:</td><td></td></tr>
 		<tr><td>func</td><td colspan=2>WithFPS</td><td align="center">:x:</td><td></td></tr>

@@ -62,6 +62,8 @@ progress()
 			implemented
 		type ProgramOption
 			implemented
+		func WithAltScreen
+			implemented
 		func WithMouseAllMotion
 			implemented
 		func WithReportFocus

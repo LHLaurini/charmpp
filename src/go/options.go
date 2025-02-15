@@ -7,6 +7,11 @@ import (
 	tea "github.com/charmbracelet/bubbletea"
 )
 
+//export WithAltScreen
+func WithAltScreen() goObject {
+	return toGoObject(tea.WithAltScreen())
+}
+
 //export WithMouseAllMotion
 func WithMouseAllMotion() goObject {
 	return toGoObject(tea.WithMouseAllMotion())
