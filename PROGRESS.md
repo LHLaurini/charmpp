@@ -34,10 +34,10 @@
     <tbody>
         <tr>
             <td>Bubble Tea</td>
-            <td align="center">25</td>
+            <td align="center">26</td>
             <td align="center">0</td>
             <td align="center">80</td>
-            <td align="center">31.3%</td>
+            <td align="center">32.5%</td>
         </tr>
         <tr>
             <td>Bubbles/cursor</td>
@@ -169,10 +169,10 @@
     <tfoot>
         <tr>
             <th>Total</td>
-            <th>25</td>
+            <th>26</td>
             <th>0</td>
             <th>657</td>
-            <th>3.8%</td>
+            <th>4.0%</td>
         </tr>
     </tfoot>
 </table>
@@ -212,7 +212,7 @@
 		<tr><td>func</td><td>(Key)</td><td>String</td><td align="center">:heavy_check_mark:</td><td></td></tr>
 		<tr><td>type</td><td colspan=2>KeyMsg</td><td align="center">:heavy_check_mark:</td><td><code>KeyMsg</code> is an alias for <code>Key</code></td></tr>
 		<tr><td>func</td><td>(KeyMsg)</td><td>String</td><td align="center">:heavy_check_mark:</td><td></td></tr>
-		<tr><td>type</td><td colspan=2>KeyType</td><td align="center">:x:</td><td></td></tr>
+		<tr><td>type</td><td colspan=2>KeyType</td><td align="center">:heavy_check_mark:</td><td></td></tr>
 		<tr><td>func</td><td>(KeyType)</td><td>String</td><td align="center">:x:</td><td></td></tr>
 		<tr><td>type</td><td colspan=2>LogOptionsSetter</td><td align="center">:x:</td><td></td></tr>
 		<tr><td>type</td><td colspan=2>Model</td><td align="center">:heavy_check_mark:</td><td></td></tr>

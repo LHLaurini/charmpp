@@ -115,7 +115,7 @@ static constexpr StoreAccessor<T> GetStore;
 auto FromCppKey(const tea::Key& key) -> ::CppKey
 {
 	return {
-		.Type = key.Type,
+		.Type = std::to_underlying(key.Type),
 		.Runes = key.Runes.data(),
 		.NumRunes = static_cast<unsigned int>(key.Runes.size()),
 		.Alt = key.Alt,

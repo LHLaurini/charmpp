@@ -22,6 +22,8 @@ progress()
 			note "<code>KeyMsg</code> is an alias for <code>Key</code>"
 		type "(KeyMsg) String"
 			implemented
+		type KeyType
+			implemented
 		type MouseAction
 			implemented
 		type MouseButton

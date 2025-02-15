@@ -1,6 +1,7 @@
 module;
 
 #include <string>
+#include <utility>
 
 export module charm:bubbletea.key;
 
@@ -9,7 +10,7 @@ import :go;
 export namespace bubbletea
 {
 
-enum KeyType : int
+enum class KeyType : int
 {
 	KeyF20 = -53,
 	KeyF19,
@@ -98,6 +99,8 @@ enum KeyType : int
 	KeyCtrlUnderscore, // 31
 };
 
+using enum KeyType;
+
 // We separate the sequential values from these
 constexpr auto KeyNull = KeyCtrlAt;
 constexpr auto KeyBreak = KeyCtrlC;
@@ -109,7 +112,7 @@ constexpr auto KeyBackspace = static_cast<KeyType>(127);
 constexpr auto KeyCtrlQuestionMark = KeyBackspace;
 
 // NOLINTNEXTLINE(*-magic-numbers)
-static_assert(KeyCtrlUnderscore == 31);
+static_assert(std::to_underlying(KeyCtrlUnderscore) == 31);
 
 struct Key
 {
