@@ -44,6 +44,8 @@ progress()
 		type MouseMsg
 			implemented
 			note "<code>MouseMsg</code> is an alias for <code>MouseEvent</code>"
+		func "(MouseMsg) String"
+			implemented
 		type Model
 			implemented
 		type Msg

@@ -34,10 +34,10 @@
     <tbody>
         <tr>
             <td>Bubble Tea</td>
-            <td align="center">30</td>
+            <td align="center">31</td>
             <td align="center">0</td>
             <td align="center">80</td>
-            <td align="center">37.5%</td>
+            <td align="center">38.8%</td>
         </tr>
         <tr>
             <td>Bubbles/cursor</td>
@@ -169,10 +169,10 @@
     <tfoot>
         <tr>
             <th>Total</td>
-            <th>30</td>
+            <th>31</td>
             <th>0</td>
             <th>657</td>
-            <th>4.6%</td>
+            <th>4.7%</td>
         </tr>
     </tfoot>
 </table>
@@ -222,7 +222,7 @@
 		<tr><td>func</td><td>(MouseEvent)</td><td>IsWheel</td><td align="center">:heavy_check_mark:</td><td></td></tr>
 		<tr><td>func</td><td>(MouseEvent)</td><td>String</td><td align="center">:heavy_check_mark:</td><td></td></tr>
 		<tr><td>type</td><td colspan=2>MouseMsg</td><td align="center">:heavy_check_mark:</td><td><code>MouseMsg</code> is an alias for <code>MouseEvent</code></td></tr>
-		<tr><td>func</td><td>(MouseMsg)</td><td>String</td><td align="center">:x:</td><td></td></tr>
+		<tr><td>func</td><td>(MouseMsg)</td><td>String</td><td align="center">:heavy_check_mark:</td><td></td></tr>
 		<tr><td>type</td><td colspan=2>Msg</td><td align="center">:heavy_check_mark:</td><td></td></tr>
 		<tr><td>func</td><td colspan=2>ClearScreen</td><td align="center">:x:</td><td></td></tr>
 		<tr><td>func</td><td colspan=2>DisableBracketedPaste</td><td align="center">:x:</td><td></td></tr>
