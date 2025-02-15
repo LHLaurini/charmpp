@@ -65,6 +65,9 @@ target_link_libraries(charm++go INTERFACE charm++cpp)
 add_library(charm++ INTERFACE)
 target_link_libraries(charm++ INTERFACE charm++go)
 
+add_executable(focus-blur examples/focus-blur/main.cpp)
+target_link_libraries(focus-blur charm++)
+
 add_executable(debounce examples/debounce/main.cpp)
 target_link_libraries(debounce charm++)
 
