@@ -18,12 +18,12 @@ typedef enum
 	MsgTypeUnknown,
 	MsgTypeUser,
 	MsgTypeInternal,
+	MsgTypeBlur,
+	MsgTypeFocus,
 	MsgTypeKey,
 	MsgTypeMouse,
 	MsgTypeQuit,
 	MsgTypeSuspend,
-	MsgTypeBlur,
-	MsgTypeFocus,
 } MsgType;
 
 typedef struct

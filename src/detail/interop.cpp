@@ -163,6 +163,16 @@ struct MsgToGo
 		return { MsgTypeInternal, msg.Handle };
 	}
 
+	auto operator()(tea::BlurMsg /*msg*/) const -> MsgTypeAndMsg
+	{
+		return { MsgTypeBlur, 0 };
+	}
+
+	auto operator()(tea::FocusMsg /*msg*/) const -> MsgTypeAndMsg
+	{
+		return { MsgTypeFocus, 0 };
+	}
+
 	auto operator()(const tea::KeyMsg& msg) const -> MsgTypeAndMsg
 	{
 		return { MsgTypeKey, ::ToGoKey(FromCppKey(msg)) };
@@ -181,16 +191,6 @@ struct MsgToGo
 	auto operator()(tea::SuspendMsg /*msg*/) const -> MsgTypeAndMsg
 	{
 		return { MsgTypeSuspend, 0 };
-	}
-
-	auto operator()(tea::BlurMsg /*msg*/) const -> MsgTypeAndMsg
-	{
-		return { MsgTypeBlur, 0 };
-	}
-
-	auto operator()(tea::FocusMsg /*msg*/) const -> MsgTypeAndMsg
-	{
-		return { MsgTypeFocus, 0 };
 	}
 
 	auto operator()(std::any msg) const -> MsgTypeAndMsg
@@ -246,6 +246,12 @@ auto callUpdate(void* modelPtr, MsgType msgType, std::uintptr_t msgValue) -> std
 			// FIXME: throw exception here
 			std::terminate();
 
+		case MsgType::MsgTypeBlur:
+			return tea::BlurMsg();
+
+		case MsgType::MsgTypeFocus:
+			return tea::FocusMsg();
+
 		case MsgType::MsgTypeKey:
 			return GetStore<tea::Key>().Detach(msgValue);
 
@@ -257,12 +263,6 @@ auto callUpdate(void* modelPtr, MsgType msgType, std::uintptr_t msgValue) -> std
 
 		case MsgType::MsgTypeSuspend:
 			return tea::SuspendMsg();
-
-		case MsgType::MsgTypeBlur:
-			return tea::BlurMsg();
-
-		case MsgType::MsgTypeFocus:
-			return tea::FocusMsg();
 
 		case MsgType::MsgTypeUser:
 			return GetStore<std::any>().Detach(msgValue);

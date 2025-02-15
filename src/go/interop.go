@@ -17,6 +17,10 @@ func typeFromMsg(msg tea.Msg) C.MsgType {
 	switch msg.(type) {
 	case C.uintptr_t:
 		return C.MsgTypeUser
+	case tea.BlurMsg:
+		return C.MsgTypeBlur
+	case tea.FocusMsg:
+		return C.MsgTypeFocus
 	case tea.KeyMsg:
 		return C.MsgTypeKey
 	case tea.MouseMsg:
@@ -25,10 +29,6 @@ func typeFromMsg(msg tea.Msg) C.MsgType {
 		return C.MsgTypeSuspend
 	case tea.QuitMsg:
 		return C.MsgTypeQuit
-	case tea.BlurMsg:
-		return C.MsgTypeBlur
-	case tea.FocusMsg:
-		return C.MsgTypeFocus
 	default:
 		return C.MsgTypeUnknown
 	}
@@ -38,6 +38,10 @@ func valueFromMsg(msg tea.Msg) C.uintptr_t {
 	switch msg := msg.(type) {
 	case C.uintptr_t:
 		return msg
+	case tea.BlurMsg:
+		return 0
+	case tea.FocusMsg:
+		return 0
 	case tea.KeyMsg:
 		return toCppKey(tea.Key(msg))
 	case tea.MouseMsg:
@@ -45,10 +49,6 @@ func valueFromMsg(msg tea.Msg) C.uintptr_t {
 	case tea.SuspendMsg:
 		return 0
 	case tea.QuitMsg:
-		return 0
-	case tea.BlurMsg:
-		return 0
-	case tea.FocusMsg:
 		return 0
 	default:
 		return 0
@@ -77,17 +77,17 @@ func makeCmd(cmdID C.uintptr_t) tea.Cmd {
 			handle.Delete()
 			return goMsg
 
-		case C.MsgTypeQuit:
-			return tea.Quit()
-
-		case C.MsgTypeSuspend:
-			return tea.Suspend()
-
 		case C.MsgTypeBlur:
 			return tea.BlurMsg{}
 
 		case C.MsgTypeFocus:
 			return tea.FocusMsg{}
+
+		case C.MsgTypeQuit:
+			return tea.Quit()
+
+		case C.MsgTypeSuspend:
+			return tea.Suspend()
 
 		default:
 			log.Fatal("unknown message type received")
