@@ -79,3 +79,6 @@ target_link_libraries(mouse charm++)
 
 add_executable(simple examples/simple/main.cpp)
 target_link_libraries(simple charm++)
+
+add_executable(suspend examples/suspend/main.cpp)
+target_link_libraries(suspend charm++)
