@@ -1,8 +1,7 @@
 module;
 
 #include <concepts>
-#include <string>
-#include <string_view>
+#include <ranges>
 #include <tuple>
 #include <type_traits>
 #include <utility>
@@ -22,7 +21,11 @@ auto ConvertArgs()
 	return std::tuple{};
 }
 
-auto ConvertArgs(std::string_view str)
+template <typename T>
+concept StringLike = std::same_as<std::ranges::range_value_t<T>, char> &&
+                     std::ranges::contiguous_range<const T> && std::ranges::sized_range<const T>;
+
+auto ConvertArgs(StringLike auto& str)
 {
 	// cgo doesn't support const, so we strip it away
 	// NOLINTNEXTLINE(cppcoreguidelines-pro-type-const-cast)
@@ -36,7 +39,8 @@ auto ConvertArgs(auto first, auto... others)
 
 /// Call \p func after converting \p args.
 /// This function performs the following conversions:
-/// - `std::string_view` becomes `char*`, `int`
+/// - String-like objects (std::string, std::string_view, std::vector<char>, std::span<char, ...>,
+///   std::array<char, ...>, char[...]) become `char*`, `int`
 template <typename Ret, typename... Params>
 auto CgoCall(Ret (*func)(Params...), auto... args)
 {

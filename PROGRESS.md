@@ -34,10 +34,10 @@
     <tbody>
         <tr>
             <td>Bubble Tea</td>
-            <td align="center">23</td>
+            <td align="center">25</td>
             <td align="center">0</td>
             <td align="center">80</td>
-            <td align="center">28.8%</td>
+            <td align="center">31.3%</td>
         </tr>
         <tr>
             <td>Bubbles/cursor</td>
@@ -169,10 +169,10 @@
     <tfoot>
         <tr>
             <th>Total</td>
-            <th>23</td>
+            <th>25</td>
             <th>0</td>
             <th>657</td>
-            <th>3.5%</td>
+            <th>3.8%</td>
         </tr>
     </tfoot>
 </table>
@@ -199,8 +199,8 @@
 		<tr><td>func</td><td colspan=2>Every</td><td align="center">:x:</td><td></td></tr>
 		<tr><td>func</td><td colspan=2>Exec</td><td align="center">:x:</td><td></td></tr>
 		<tr><td>func</td><td colspan=2>ExecProcess</td><td align="center">:x:</td><td></td></tr>
-		<tr><td>func</td><td colspan=2>Printf</td><td align="center">:x:</td><td></td></tr>
-		<tr><td>func</td><td colspan=2>Println</td><td align="center">:x:</td><td></td></tr>
+		<tr><td>func</td><td colspan=2>Printf</td><td align="center">:heavy_check_mark:</td><td>Implemented as <code>Print</code>, uses <code>std::format_string</code> instead of <code>printf</code>-style format strings</td></tr>
+		<tr><td>func</td><td colspan=2>Println</td><td align="center">:heavy_check_mark:</td><td></td></tr>
 		<tr><td>func</td><td colspan=2>Sequence</td><td align="center">:x:</td><td></td></tr>
 		<tr><td>func</td><td colspan=2>SetWindowTitle</td><td align="center">:x:</td><td></td></tr>
 		<tr><td>func</td><td colspan=2>Tick</td><td align="center">:x:</td><td></td></tr>

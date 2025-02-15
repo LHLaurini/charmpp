@@ -14,6 +14,7 @@ export module charm:bubbletea.tea;
 import :bubbletea.key;
 import :bubbletea.mouse;
 import :bubbletea.options;
+import :bubbletea.standard_renderer.detail;
 import :go;
 
 namespace bubbletea
@@ -21,6 +22,11 @@ namespace bubbletea
 
 export class UnknownMsg
 {
+};
+
+export struct InternalMsg
+{
+	uintptr_t Handle;
 };
 
 export class QuitMsg
@@ -31,7 +37,7 @@ export class SuspendMsg
 {
 };
 
-export using Msg = std::variant<UnknownMsg, KeyMsg, MouseEvent, QuitMsg, SuspendMsg, std::any>;
+export using Msg = std::variant<UnknownMsg, InternalMsg, KeyMsg, MouseEvent, QuitMsg, SuspendMsg, std::any>;
 export using Cmd = std::function<Msg()>;
 
 export class ModelBase

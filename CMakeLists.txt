@@ -20,6 +20,7 @@ target_sources(charm++cpp
 	             src/logging.cpp
 	             src/mouse.cpp
 	             src/options.cpp
+	             src/standard_renderer.cpp
 	             src/tea.cpp
 	             src/utils.cpp
 
@@ -28,6 +29,7 @@ target_sources(charm++cpp
 	             src/detail/interop.cpp
 	             src/detail/key.cpp
 	             src/detail/mouse.cpp
+	             src/detail/standard_renderer.cpp
 	             src/detail/utils.cpp
 )
 

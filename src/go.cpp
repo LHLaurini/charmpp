@@ -1,6 +1,8 @@
 module;
 
 #include "libcharm++go.h"
+#include <concepts>
+#include <string>
 
 export module charm:go;
 
@@ -32,6 +34,11 @@ class Stringer : go::GoObject
 
   private:
 	using go::GoObject::GoObject;
+};
+
+template <typename T>
+concept StringerLike = requires(const T& obj) {
+	{ obj.String() } -> std::same_as<std::string>;
 };
 
 class File : go::GoObject

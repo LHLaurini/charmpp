@@ -59,6 +59,8 @@ func makeCmd(cmdID C.uintptr_t) tea.Cmd {
 		case C.MsgTypeUser:
 			return msg.Msg
 
+		case C.MsgTypeInternal:
+			fallthrough
 		case C.MsgTypeKey:
 			fallthrough
 		case C.MsgTypeMouse:
@@ -157,6 +159,11 @@ func ToGoKey(key C.CppKey) goObject {
 //export ToGoMouseEvent
 func ToGoMouseEvent(mouseEvent C.InterMouseEvent) goObject {
 	return toGoObject(fromCppMouseEvent(mouseEvent))
+}
+
+//export Println
+func Println(str *C.char, length C.int) goObject {
+	return toGoObject(tea.Println(C.GoStringN(str, length))())
 }
 
 //export ToCppString

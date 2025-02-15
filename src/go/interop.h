@@ -17,6 +17,7 @@ typedef enum
 {
 	MsgTypeUnknown,
 	MsgTypeUser,
+	MsgTypeInternal,
 	MsgTypeKey,
 	MsgTypeMouse,
 	MsgTypeQuit,

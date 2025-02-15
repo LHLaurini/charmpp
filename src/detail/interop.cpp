@@ -157,6 +157,11 @@ struct MsgToGo
 		std::terminate();
 	}
 
+	auto operator()(tea::InternalMsg msg) const -> MsgTypeAndMsg
+	{
+		return { MsgTypeInternal, msg.Handle };
+	}
+
 	auto operator()(const tea::KeyMsg& msg) const -> MsgTypeAndMsg
 	{
 		return { MsgTypeKey, ::ToGoKey(FromCppKey(msg)) };
@@ -224,6 +229,11 @@ auto callUpdate(void* modelPtr, MsgType msgType, std::uintptr_t msgValue) -> std
 		{
 		case MsgType::MsgTypeUnknown:
 			return tea::UnknownMsg();
+
+		case MsgType::MsgTypeInternal:
+			// We shouldn't receive these
+			// FIXME: throw exception here
+			std::terminate();
 
 		case MsgType::MsgTypeKey:
 			return GetStore<tea::Key>().Detach(msgValue);
