@@ -36,8 +36,8 @@
             <td>Bubble Tea</td>
             <td align="center">32</td>
             <td align="center">0</td>
-            <td align="center">80</td>
-            <td align="center">40.0%</td>
+            <td align="center">82</td>
+            <td align="center">39.0%</td>
         </tr>
         <tr>
             <td>Bubbles/cursor</td>
@@ -171,7 +171,7 @@
             <th>Total</td>
             <th>32</td>
             <th>0</td>
-            <th>657</td>
+            <th>659</td>
             <th>4.9%</td>
         </tr>
     </tfoot>
@@ -189,7 +189,7 @@
 		</tr>
 	</thead>
 	<tbody>
-	<tr><td rowspan=81>Bubble Tea</td></tr>
+	<tr><td rowspan=83>Bubble Tea</td></tr>
 		<tr><td>func</td><td colspan=2>LogToFile</td><td align="center">:warning:</td><td><code>go::File</code> cannot be used from C++</td></tr>
 		<tr><td>func</td><td colspan=2>LogToFileWith</td><td align="center">:x:</td><td></td></tr>
 		<tr><td>type</td><td colspan=2>BatchMsg</td><td align="center">:x:</td><td></td></tr>
@@ -208,6 +208,7 @@
 		<tr><td>type</td><td colspan=2>ExecCallback</td><td align="center">:x:</td><td></td></tr>
 		<tr><td>type</td><td colspan=2>ExecCommand</td><td align="center">:x:</td><td></td></tr>
 		<tr><td>type</td><td colspan=2>FocusMsg</td><td align="center">:heavy_check_mark:</td><td></td></tr>
+		<tr><td>type</td><td colspan=2>InterruptMsg</td><td align="center">:x:</td><td></td></tr>
 		<tr><td>type</td><td colspan=2>Key</td><td align="center">:heavy_check_mark:</td><td></td></tr>
 		<tr><td>func</td><td>(Key)</td><td>String</td><td align="center">:heavy_check_mark:</td><td></td></tr>
 		<tr><td>type</td><td colspan=2>KeyMsg</td><td align="center">:heavy_check_mark:</td><td><code>KeyMsg</code> is an alias for <code>Key</code></td></tr>
@@ -235,6 +236,7 @@
 		<tr><td>func</td><td colspan=2>EnterAltScreen</td><td align="center">:x:</td><td></td></tr>
 		<tr><td>func</td><td colspan=2>ExitAltScreen</td><td align="center">:x:</td><td></td></tr>
 		<tr><td>func</td><td colspan=2>HideCursor</td><td align="center">:x:</td><td></td></tr>
+		<tr><td>func</td><td colspan=2>Interrupt</td><td align="center">:x:</td><td></td></tr>
 		<tr><td>func</td><td colspan=2>Quit</td><td align="center">:heavy_check_mark:</td><td></td></tr>
 		<tr><td>func</td><td colspan=2>ShowCursor</td><td align="center">:x:</td><td></td></tr>
 		<tr><td>func</td><td colspan=2>Suspend</td><td align="center">:heavy_check_mark:</td><td></td></tr>
