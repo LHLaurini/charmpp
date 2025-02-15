@@ -83,3 +83,6 @@ target_link_libraries(simple charm++)
 
 add_executable(suspend examples/suspend/main.cpp)
 target_link_libraries(suspend charm++)
+
+add_executable(window-size examples/window-size/main.cpp)
+target_link_libraries(window-size charm++)
