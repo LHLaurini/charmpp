@@ -81,6 +81,9 @@ target_link_libraries(mouse charm++)
 add_executable(result examples/result/main.cpp)
 target_link_libraries(result charm++)
 
+add_executable(sequence examples/sequence/main.cpp)
+target_link_libraries(sequence charm++)
+
 add_executable(set-window-title examples/set-window-title/main.cpp)
 target_link_libraries(set-window-title charm++)
 
