@@ -26,9 +26,7 @@ auto Tick(std::chrono::nanoseconds duration, TickCallback callback) -> Cmd
 
 auto WindowSize() -> Cmd
 {
-	return [] -> InternalMsg {
-		return { utils::CgoCall(::WindowSize) };
-	};
+	return [] -> InternalMsg { return { utils::CgoCall(::WindowSize) }; };
 }
 
 }

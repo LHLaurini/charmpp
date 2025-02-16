@@ -1,6 +1,6 @@
 #pragma once
 
-//NOLINTBEGIN
+// NOLINTBEGIN
 
 #include <stdbool.h>
 #include <stdint.h>
@@ -97,4 +97,4 @@ void destroyString(uintptr_t stringID);
 }
 #endif
 
-//NOLINTEND
+// NOLINTEND
