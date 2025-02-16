@@ -78,6 +78,9 @@ target_link_libraries(fullscreen charm++)
 add_executable(mouse examples/mouse/main.cpp)
 target_link_libraries(mouse charm++)
 
+add_executable(result examples/result/main.cpp)
+target_link_libraries(result charm++)
+
 add_executable(simple examples/simple/main.cpp)
 target_link_libraries(simple charm++)
 
