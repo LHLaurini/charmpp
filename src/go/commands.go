@@ -5,9 +5,30 @@ import "C"
 
 import (
 	"time"
+	"unsafe"
 
 	tea "github.com/charmbracelet/bubbletea"
 )
+
+func makeCmdSlice(cmds *C.uintptr_t, numCmds C.int) []tea.Cmd {
+	slice := make([]tea.Cmd, numCmds)
+
+	for i := range slice {
+		slice[i] = makeCmd(unsafe.Slice(cmds, numCmds)[i])
+	}
+
+	return slice
+}
+
+//export Batch
+func Batch(cmds *C.uintptr_t, numCmds C.int) goObject {
+	return toGoObject(tea.Batch(makeCmdSlice(cmds, numCmds)...)())
+}
+
+//export Sequence
+func Sequence(cmds *C.uintptr_t, numCmds C.int) goObject {
+	return toGoObject(tea.Sequence(makeCmdSlice(cmds, numCmds)...)())
+}
 
 //export SetWindowTitle
 func SetWindowTitle(title *C.char, titleLen C.int) goObject {

@@ -22,19 +22,20 @@ auto ConvertArgs()
 }
 
 template <typename T>
-concept StringLike = std::same_as<std::ranges::range_value_t<T>, char> &&
-                     std::ranges::contiguous_range<const T> && std::ranges::sized_range<const T>;
+concept ContiguousSizedRange =
+    std::ranges::contiguous_range<const T> && std::ranges::sized_range<const T>;
 
-auto ConvertArgs(StringLike auto& str)
+template <ContiguousSizedRange R>
+auto ConvertArg(R& range)
 {
 	// cgo doesn't support const, so we strip it away
 	// NOLINTNEXTLINE(cppcoreguidelines-pro-type-const-cast)
-	return std::tuple{ const_cast<char*>(str.data()), str.size() };
+	return std::tuple{ const_cast<std::ranges::range_value_t<R>*>(range.data()), range.size() };
 }
 
 auto ConvertArgs(auto first, auto... others)
 {
-	return std::tuple_cat(ConvertArgs(first), ConvertArgs(others...));
+	return std::tuple_cat(ConvertArg(first), ConvertArgs(others...));
 }
 
 /// Call \p func after converting \p args.

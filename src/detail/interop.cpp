@@ -167,6 +167,11 @@ auto FromCppWindowSizeMsg(const tea::WindowSizeMsg& windowSizeMsg) -> ::WindowSi
 	};
 }
 
+auto StowCmd(bubbletea::Cmd cmd)
+{
+	return GetStore<bubbletea::Cmd>().Stow(std::move(cmd));
+}
+
 struct MsgToGo
 {
 	auto operator()(tea::UnknownMsg /*msg*/) const -> MsgTypeAndMsg

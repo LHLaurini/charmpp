@@ -34,10 +34,10 @@
     <tbody>
         <tr>
             <td>Bubble Tea</td>
-            <td align="center">38</td>
+            <td align="center">40</td>
             <td align="center">0</td>
             <td align="center">82</td>
-            <td align="center">46.3%</td>
+            <td align="center">48.8%</td>
         </tr>
         <tr>
             <td>Bubbles/cursor</td>
@@ -169,10 +169,10 @@
     <tfoot>
         <tr>
             <th>Total</td>
-            <th>38</td>
+            <th>40</td>
             <th>0</td>
             <th>659</td>
-            <th>5.8%</td>
+            <th>6.1%</td>
         </tr>
     </tfoot>
 </table>
@@ -192,16 +192,16 @@
 	<tr><td rowspan=83>Bubble Tea</td></tr>
 		<tr><td>func</td><td colspan=2>LogToFile</td><td align="center">:warning:</td><td><code>go::File</code> cannot be used from C++</td></tr>
 		<tr><td>func</td><td colspan=2>LogToFileWith</td><td align="center">:x:</td><td></td></tr>
-		<tr><td>type</td><td colspan=2>BatchMsg</td><td align="center">:x:</td><td></td></tr>
+		<tr><td>type</td><td colspan=2>BatchMsg</td><td align="center">:x:</td><td>Use <code>Batch</code> instead</td></tr>
 		<tr><td>type</td><td colspan=2>BlurMsg</td><td align="center">:heavy_check_mark:</td><td></td></tr>
 		<tr><td>type</td><td colspan=2>Cmd</td><td align="center">:heavy_check_mark:</td><td></td></tr>
-		<tr><td>func</td><td colspan=2>Batch</td><td align="center">:x:</td><td></td></tr>
+		<tr><td>func</td><td colspan=2>Batch</td><td align="center">:heavy_check_mark:</td><td></td></tr>
 		<tr><td>func</td><td colspan=2>Every</td><td align="center">:x:</td><td></td></tr>
 		<tr><td>func</td><td colspan=2>Exec</td><td align="center">:x:</td><td></td></tr>
 		<tr><td>func</td><td colspan=2>ExecProcess</td><td align="center">:x:</td><td></td></tr>
 		<tr><td>func</td><td colspan=2>Printf</td><td align="center">:heavy_check_mark:</td><td>Implemented as <code>Print</code>, uses <code>std::format_string</code> instead of <code>printf</code>-style format strings</td></tr>
 		<tr><td>func</td><td colspan=2>Println</td><td align="center">:heavy_check_mark:</td><td></td></tr>
-		<tr><td>func</td><td colspan=2>Sequence</td><td align="center">:x:</td><td></td></tr>
+		<tr><td>func</td><td colspan=2>Sequence</td><td align="center">:heavy_check_mark:</td><td></td></tr>
 		<tr><td>func</td><td colspan=2>SetWindowTitle</td><td align="center">:heavy_check_mark:</td><td></td></tr>
 		<tr><td>func</td><td colspan=2>Tick</td><td align="center">:heavy_check_mark:</td><td>Callback receives no arguments. Use <code>std::chrono</code> to get the time</td></tr>
 		<tr><td>func</td><td colspan=2>WindowSize</td><td align="center">:heavy_check_mark:</td><td></td></tr>
