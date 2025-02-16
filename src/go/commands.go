@@ -9,6 +9,11 @@ import (
 	tea "github.com/charmbracelet/bubbletea"
 )
 
+//export SetWindowTitle
+func SetWindowTitle(title *C.char, titleLen C.int) goObject {
+	return toGoObject(tea.SetWindowTitle(C.GoStringN(title, titleLen))())
+}
+
 //export Tick
 func Tick(durationNS int) {
 	// We could have this function receive a C++ callback, but this is way simpler. Then we can
